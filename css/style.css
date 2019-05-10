@@ -948,13 +948,40 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #51d8ad;
 }
 
+
+Amer A 
+
+6:06 PM (0 minutes ago)
+
+
+
+to me 
+
+
+
+
+
+
 /* Frequently Asked Questions Section
 --------------------------------*/
 
 #faq {
   padding: 60px 0;
   overflow: hidden;
+  color: black;
 }
+#faq p
+{
+  text-align: center;
+}
+#faq button {
+  color: black;
+}
+#faq h3
+{
+  text-align: center;
+}
+
 
 #faq #faq-list {
   padding: 0;
@@ -998,6 +1025,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #faq #faq-list a.collapsed i::before {
   content: "\f2c7" !important;
 }
+
 
 /*--------------------------------------------------------------
 # Footer
