@@ -692,7 +692,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Call To Action Section
 --------------------------------*/
 #call-to-action {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/MakeItHappen.jpeg) fixed center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/teamHands.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
 }
@@ -1363,3 +1363,4 @@ color: #888;
 font-size: 2em;
 
 }
+
