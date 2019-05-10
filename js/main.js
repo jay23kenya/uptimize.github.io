@@ -128,7 +128,7 @@ jQuery(document).ready(function ($) {
   // custom code
 
   ///Coffee functions
-  var startNumber = 25;
+  var startNumber = 496;
   var coffeeCups = startNumber;
   function getCoffee()
   {
