@@ -826,19 +826,24 @@ body.mobile-nav-active #mobile-nav-toggle {
 #portfolio .portfolio-item:hover img {
   top: -30px;
 }
-@media (max-width: 768px) {
-  .portfolio-image-web
-  {
-    width:300px;
-   height:176px;
-  margin-top:30px;
-  }
-}
+
 .portfolio-image-web
 {
   width:300px;
    height:176px;
   margin-top:30px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-image-web
+  {
+    /* width:300px;
+   height:176px;
+  margin-top:30px; */
+    width: 400px;
+    height: 100%;
+
+  }
 }
 
 
