@@ -949,14 +949,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-Amer A 
-
-6:06 PM (0 minutes ago)
-
-
-
-to me 
-
 
 
 
@@ -983,6 +975,9 @@ to me
 }
 
 
+  #che{
+    text-overflow: clip;
+  }
 #faq #faq-list {
   padding: 0;
   list-style: none;
@@ -1016,16 +1011,22 @@ to me
 
 #faq #faq-list a.collapse {
   color: #1bb1dc;
+  word-wrap: break-word;
 }
 
 #faq #faq-list a.collapsed {
   color: #000;
+  word-wrap: break-word;
 }
 
 #faq #faq-list a.collapsed i::before {
   content: "\f2c7" !important;
 }
 
+#faqWrap{
+  white-space: initial;
+  text-align: left;
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -1357,4 +1358,3 @@ color: #888;
 font-size: 2em;
 
 }
-
