@@ -1,9 +1,3 @@
-/*
-  Theme Name: Regna
-  Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -35,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-/* Prelaoder */
+/* Prelaoder *//*
 #preloader {
   position: fixed;
   left: 0;
@@ -46,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: visible;
   background: #fff url("../img/preloader.svg") no-repeat center center;
 }
+*/
 
 /* Back to top button */
 .back-to-top {
@@ -143,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url(../img/helloquence-61189-unsplash\ \(1\).jpg) top center;
+  background: url(../img/mainBackground.jpg) top center;
   background-size: cover;
   position: relative;
 }
@@ -228,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section.spacer.bg3 {
-	background: url(../img/bg/bg-3.jpg) 50% 0 no-repeat fixed;
+	/* background: url(../img/bg/bg-3.jpg) 50% 0 no-repeat fixed; */
 	width:100%;
 	height:auto;
 	margin:0;	
@@ -523,9 +518,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .about-container .background {
   min-height: 400px;
-  background: url(../img/IMG_2517_1_50_1_25.jpg) center top no-repeat;
+  background: url(../img/ourTeam.jpg);
+  background-position: 100% top; 
+  background-repeat: no-repeat;
   margin-bottom: 10px;
-  
+   
 }
 
 #about .about-container .content {
@@ -543,7 +540,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-top: 15px;
   }
 }
-
+jj j    
 #about .about-container p {
   line-height: 26px;
 }
