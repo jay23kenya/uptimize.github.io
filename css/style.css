@@ -1113,7 +1113,7 @@ jj j
   background: #515e61;
   display: inline-block;
   padding: 6px 30px;
-  margin-top: 0px;
+  /* margin-top: 0px; */
 
   border-radius: 20px;
   color: #fff;
@@ -1128,7 +1128,7 @@ jj j
   background: #515e61;
   display: inline-block;
   padding: 6px 30px;
-  margin-top: 194.5px;
+  /* margin-top: 194.5px; */
   border-radius: 20px;
   color: #fff;
   transition: none;
@@ -1139,7 +1139,7 @@ jj j
 }
 
 #pricing .get-started-btn2 {
-  margin-top: 22px;
+  /* margin-top: 22px; */
   background: #515e61;
   display: inline-block;
   padding: 6px 30px;
