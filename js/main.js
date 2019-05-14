@@ -128,7 +128,7 @@ jQuery(document).ready(function ($) {
   // custom code
 
   ///Coffee functions
-  var startNumber = 496;
+  var startNumber = 728;
   var coffeeCups = startNumber;
   function getCoffee()
   {
@@ -151,7 +151,7 @@ jQuery(document).ready(function ($) {
 
 
    //Hours of support functions
-  var hoursStartNumber = 160;
+  var hoursStartNumber = 1344;
   var supportHours = hoursStartNumber;
   function getSupport()
   {
