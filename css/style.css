@@ -1161,6 +1161,11 @@ jj j
   background: linear-gradient(45deg, #1de099, #1dc8cd);
 }
 
+.regText{
+  text-align: center;
+  color: #999;
+}
+
 /* Testimonials Section
 --------------------------------*/
 
