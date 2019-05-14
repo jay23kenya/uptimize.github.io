@@ -1109,61 +1109,39 @@ jj j
   padding-right: 4px;
 }
 
-#pricing .get-started-btn {
-  background: #515e61;
-  display: inline-block;
-  padding: 6px 30px;
-  /* margin-top: 0px; */
-
-  border-radius: 20px;
-  color: #fff;
-  transition: none;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-
-}
-
-#pricing .get-started-btn1 {
-  background: #515e61;
-  display: inline-block;
-  padding: 6px 30px;
-  /* margin-top: 194.5px; */
-  border-radius: 20px;
-  color: #fff;
-  transition: none;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-
-}
-
-#pricing .get-started-btn2 {
-  /* margin-top: 22px; */
-  background: #515e61;
-  display: inline-block;
-  padding: 6px 30px;
-  border-radius: 20px;
-  color: #fff;
-  transition: none;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-  
-
-}
 
 #pricing .featured {
   border: 2px solid #1dc8cd;
 }
 
-#pricing .featured .get-started-btn {
+#pricing .featured .gs-btn {
   background: linear-gradient(45deg, #1de099, #1dc8cd);
 }
 
 .regText{
   text-align: center;
   color: #999;
+}
+
+#buttonParent
+{
+  position: relative;
+}
+
+#buttonParent .gs-btn{
+  position: absolute;
+  right:0;
+  left: 0;
+  bottom:0;
+  background: #515e61;
+  display: inline-block;
+  padding: 6px 30px;
+
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Testimonials Section
