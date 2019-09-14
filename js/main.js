@@ -1,3 +1,4 @@
+
 jQuery(document).ready(function ($) {
 
   // Header fixed and Back to top button
@@ -127,8 +128,37 @@ jQuery(document).ready(function ($) {
 
   // custom code
 
+
+   //Hours of support functions
+  var initialDate = new Date(2019, 3, 15, 10);
+  var d = new Date();
+  var hoursStartNumber = parseInt(Math.abs(initialDate - d) / 36e5);
+  var supportHours = parseInt(Math.abs(initialDate - d) / 36e5);// hoursStartNumber;
+  function getSupport()
+  {
+    
+    supportHours += 1;
+    document.getElementById("getSupportHours").innerHTML = supportHours;
+  }
+   setInterval(getSupport, 7200000);
+
+   //Initialize support to startNumber
+   function noSupport()
+   {
+      if(supportHours == hoursStartNumber)
+      {
+        document.getElementById("getSupportHours").innerHTML = supportHours;
+      }
+   }
+   noSupport();
+
+   //End of Support functions
+
+
+
+
   ///Coffee functions
-  var startNumber = 728;
+  var startNumber =  parseInt(Math.abs(initialDate - d) / 36e5 / 24 * 5);
   var coffeeCups = startNumber;
   function getCoffee()
   {
@@ -150,27 +180,9 @@ jQuery(document).ready(function ($) {
 
 
 
-   //Hours of support functions
-  var hoursStartNumber = 1344;
-  var supportHours = hoursStartNumber;
-  function getSupport()
-  {
-    supportHours += 1;
-    document.getElementById("getSupportHours").innerHTML = supportHours;
-  }
-   setInterval(getSupport, 7200000);
 
-   //Initialize support to startNumber
-   function noSupport()
-   {
-      if(supportHours == hoursStartNumber)
-      {
-        document.getElementById("getSupportHours").innerHTML = supportHours;
-      }
-   }
-   noSupport();
 
-   //End of Support functions
+
 
 
 //Header typing
