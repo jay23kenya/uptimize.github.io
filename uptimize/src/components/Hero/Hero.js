@@ -36,7 +36,8 @@ const styles = {
     width: "100%"
   },
   gradient: {
-      background: '-webkit-linear-gradient(#03fc7f, #292)',
+      //#292
+      background: '-webkit-linear-gradient(#03fc7f, #aaa)',
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent'
   }
@@ -60,7 +61,6 @@ const HeroContent = props => {
               <h1 style={{ ...props.mainStyle.header, ...styles.growText }}>
                 Marketing to Help You <span style={styles.gradient}>Grow</span> Your Business
               </h1>
-         
               <FadeInText fadeInText={fadeInText} mainStyle={props.mainStyle} />
               {/* <h2
               style={{
