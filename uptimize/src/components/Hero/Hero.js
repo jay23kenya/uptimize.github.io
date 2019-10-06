@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Container } from "@material-ui/core";
-import { Parallax } from "react-scroll-parallax";
 import backgroundImage from "../../images/HeroImage.jpg";
 import lazyBackgroundImage from "../../images/HeroImage-min.jpg";
 import LazyLoad from "react-lazyload";

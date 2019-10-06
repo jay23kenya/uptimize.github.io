@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Hero from "../../components/Hero/Hero";
-import Footer from "../../components/Footer/Footer";
 import Problem from "../../components/Problem/Problem";
+import Nav from "../../components/Nav/Nav";
+
+// import Footer from "../../components/Footer/Footer";
 
 const mainStyle = {
   primaryColor: {
@@ -19,7 +21,7 @@ const mainStyle = {
     fontFamily: "'Proza Libre', sans-serif",
     fontSize: "28px",
     fontWeight: "700",
-    letterSpacing: '0px'
+    letterSpacing: "0px"
   },
   text: {
     fontFamily: "'Proza Libre', sans-serif",
@@ -39,11 +41,11 @@ const mainStyle = {
     padding: "14px 36px"
   },
   alternateBackgroundColor: {
-      backgroundColor: '#f7f9fc'
+    backgroundColor: "#f7f9fc"
   },
   section: {
-      paddingTop: '75px',
-      paddingBottom: '75px'
+    paddingTop: "75px",
+    paddingBottom: "75px"
   }
 };
 
@@ -52,12 +54,18 @@ export class LandingPage extends Component {
     return (
       <div>
         <Hero mainStyle={mainStyle} />
-        <div style={{zIndex: 10}}>
-        <Problem mainStyle={mainStyle} />
-        
+        <div id='navStick' style={{ zIndex: 10 }}>
+          <Nav mainStyle={mainStyle} />
+          <Problem mainStyle={mainStyle} />
 
-        <div style={{ height: "1000px", width: '100%', backgroundColor: 'white' }} />
-        {/* <Footer mainStyle={mainStyle} /> */}
+          <div
+            style={{
+              height: "1000px",
+              width: "100%",
+              backgroundColor: "white"
+            }}
+          />
+          {/* <Footer mainStyle={mainStyle} /> */}
         </div>
       </div>
     );

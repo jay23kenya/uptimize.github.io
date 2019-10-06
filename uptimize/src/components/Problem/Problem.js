@@ -26,6 +26,7 @@ const problems2 = [
 const Problem = props => {
   return (
     <div
+      id='problem'
       style={{
         ...props.mainStyle.alternateBackgroundColor,
         ...props.mainStyle.section
