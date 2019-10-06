@@ -7,7 +7,6 @@ import lazyBackgroundImage from "../../images/HeroImage-min.jpg";
 import LazyLoad from "react-lazyload";
 import FadeInText from "./FadeInText";
 
-
 const styles = {
   hero: {
     backgroundImage: `url(${backgroundImage})`,
@@ -36,10 +35,10 @@ const styles = {
     width: "100%"
   },
   gradient: {
-      //#292
-      background: '-webkit-linear-gradient(#03fc7f, #aaa)',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent'
+    //#292
+    background: "-webkit-linear-gradient(#03fc7f, #aaa)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent"
   }
 };
 
@@ -58,7 +57,8 @@ const HeroContent = props => {
           <Container fixed>
             <div className="text-center" style={{ color: "white" }}>
               <h1 style={{ ...props.mainStyle.header, ...styles.growText }}>
-                Marketing to Help You <span style={styles.gradient}>Grow</span> Your Business
+                Marketing to Help You <span style={styles.gradient}>Grow</span>{" "}
+                Your Business
               </h1>
               <FadeInText fadeInText={fadeInText} mainStyle={props.mainStyle} />
               {/* <h2
@@ -91,7 +91,7 @@ HeroContent.propTypes = {
 const Hero = props => {
   return (
     <div>
-      <Parallax>
+      <div style={{ zIndex: -10, position: "fixed", width: "100%" }}>
         <LazyLoad
           once
           height={500}
@@ -100,7 +100,8 @@ const Hero = props => {
         >
           <HeroContent mainStyle={props.mainStyle} />
         </LazyLoad>
-      </Parallax>
+      </div>
+      <div style={{ height: "100vh", maxWidth: "100%", zIndex: -9 }} />
     </div>
   );
 };

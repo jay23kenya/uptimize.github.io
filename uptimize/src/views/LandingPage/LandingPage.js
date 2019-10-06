@@ -52,10 +52,13 @@ export class LandingPage extends Component {
     return (
       <div>
         <Hero mainStyle={mainStyle} />
+        <div style={{zIndex: 10}}>
         <Problem mainStyle={mainStyle} />
+        
 
-        <div style={{ height: "1000px", width: '1px' }} />
+        <div style={{ height: "1000px", width: '100%', backgroundColor: 'white' }} />
         {/* <Footer mainStyle={mainStyle} /> */}
+        </div>
       </div>
     );
   }
