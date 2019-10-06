@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { fadeInUpBig, fadeOut, zoomIn, zoomOut } from "react-animations";
+import { fadeInUp, fadeOut, zoomIn, zoomOut } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 import PropTypes from "prop-types";
 import ColorButton from "../../misc/ColorButton";
@@ -34,7 +34,7 @@ export class FadeInText extends Component {
         styles: {
           fadeIn: {
             animation: `x ${this.props.animationDuration.toString()}s`,
-            animationName: Radium.keyframes(fadeInUpBig, "fadeInUpBig")
+            animationName: Radium.keyframes(fadeInUp, "fadeInUp")
           },
           fadeOut: {
             animation: `x ${fadeOutDuration}s`,
@@ -118,6 +118,7 @@ export class FadeInText extends Component {
               <ColorButton
                 contained
                 noRadius
+                textColor='white'
                 color={this.props.mainStyle.buttonColor.color}
                 hoverColor={this.props.mainStyle.buttonColor.hoverColor}
                 style={{
@@ -133,6 +134,7 @@ export class FadeInText extends Component {
               <ColorButton
                 contained
                 noRadius
+                textColor='white'
                 color={this.props.mainStyle.buttonColor.color}
                 hoverColor={this.props.mainStyle.buttonColor.hoverColor}
                 style={{

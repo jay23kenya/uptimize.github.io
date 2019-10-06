@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Button } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import { Parallax } from "react-scroll-parallax";
 import backgroundImage from "../../images/HeroImage.jpg";
 import lazyBackgroundImage from "../../images/HeroImage-min.jpg";
@@ -51,7 +51,6 @@ const fadeInText = [
 ];
 
 const HeroContent = props => {
-  console.log("p2", props);
   return (
     <div style={props.lazy ? styles.lazyHero : styles.hero}>
       <div style={styles.overlay}>
