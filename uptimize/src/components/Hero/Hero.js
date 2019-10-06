@@ -39,6 +39,18 @@ const styles = {
     background: "-webkit-linear-gradient(#03fc7f, #aaa)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent"
+  },
+  stick: {
+    content: {
+      zIndex: -10,
+      position: "fixed",
+      width: "100%"
+    },
+    helper: {
+      height: "100vh",
+      maxWidth: "100%",
+      zIndex: -9
+    }
   }
 };
 
@@ -91,7 +103,7 @@ HeroContent.propTypes = {
 const Hero = props => {
   return (
     <div>
-      <div style={{ zIndex: -10, position: "fixed", width: "100%" }}>
+      <div style={styles.stick.content}>
         <LazyLoad
           once
           height={500}
@@ -101,7 +113,7 @@ const Hero = props => {
           <HeroContent mainStyle={props.mainStyle} />
         </LazyLoad>
       </div>
-      <div style={{ height: "100vh", maxWidth: "100%", zIndex: -9 }} />
+      <div style={styles.stick.helper} />
     </div>
   );
 };
