@@ -16,8 +16,8 @@ import { Container } from "@material-ui/core";
 const backgroundColor = "grey";
 const styles = {
   logo: {
-    height: "75%",
-    width: "75%",
+    height: "45%",
+    width: "45%",
     position: {
       position: "absolute",
       top: 12.5
@@ -62,7 +62,7 @@ const NavContent = props => {
               <div
                 style={
                   props.collapsed
-                    ? { backgroundColor: props.transparentBackground }
+                    ? { backgroundColor: 'inherit' }
                     : { backgroundColor: styles.backgroundColor, padding: '5px'}
                 }
               >
@@ -70,12 +70,12 @@ const NavContent = props => {
                 <Navigation className="ml-auto" navbar>
                   <NavItem>
                     <NavLink href="#problem">
-                      <div style={{ ...props.mainStyle.text }}>Problem</div>
+                      <div style={{ ...props.mainStyle.text, fontSize: '14px' }}>Problem</div>
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink href="#solution">
-                      <div style={{ ...props.mainStyle.text }}>Solution</div>
+                      <div style={{ ...props.mainStyle.text, fontSize: '14px'  }}>Solution</div>
                     </NavLink>
                   </NavItem>
                 </Navigation>

@@ -6,16 +6,19 @@ import NavContent from "./NavContent";
 const styles = {
   whiteBackground: {
     backgroundColor: "white",
-    height: "100px"
+    height: "70px"
   },
   transparentBackground: {
     backgroundColor: "rgb(256,256, 256, .8)",
-    height: "100px"
+    height: "70px",
+    boxShadow: '0 2px 10px 0 #d6d6d6'
   },
   navbar: {
     width: "100%",
-    height: "100px"
-  }
+    height: "70px",
+    boxShadow: '0 2px 10px 0 #d6d6d6'
+  },
+
 };
 
 export class Nav extends Component {
@@ -79,7 +82,7 @@ export class Nav extends Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.navbar}>
         <div id="nav">
           {this.state.transparent ? (
             <div style={styles.transparentBackground}>
@@ -102,7 +105,7 @@ export class Nav extends Component {
           )}
         </div>
         {this.state.transparent ? (
-          <div style={{ height: "100px", width: "100%", backgroundColor: 'white' }}></div>
+          <div style={{ height: "70px", width: "100%", backgroundColor: 'white' }}></div>
         ) : (
           <div />
         )}
