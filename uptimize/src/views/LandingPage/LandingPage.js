@@ -24,6 +24,7 @@ const mainStyle = {
     letterSpacing: "0px"
   },
   text: {
+    color: 'black',
     fontFamily: "'Proza Libre', sans-serif",
     fontSize: "22px",
     fontWeight: 400

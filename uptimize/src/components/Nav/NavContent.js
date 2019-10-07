@@ -7,16 +7,13 @@ import {
   NavbarBrand,
   Nav as Navigation,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from "reactstrap";
 
 import { ReactComponent as Logo } from "../../images/logo.svg";
 import { Container } from "@material-ui/core";
 
+const backgroundColor = "grey";
 const styles = {
   logo: {
     height: "75%",
@@ -26,9 +23,9 @@ const styles = {
       top: 12.5
     }
   },
+
+  backgroundColor: backgroundColor,
   nav: {
-    backgroundColor: "grey",
-    padding: "15px",
     marginLeft: "auto",
     marginBottom: "auto",
     marginTop: "auto"
@@ -38,12 +35,15 @@ const styles = {
     marginLeft: "auto",
     marginBottom: "auto",
     marginTop: "auto"
+  },
+  toggler: {
+    // backgroundColor: backgroundColor,
   }
 };
 
 const NavContent = props => {
   return (
-    <Navbar className=" h-100" sticky="top" expand="md">
+    <Navbar light className="h-100" sticky="top" expand="md">
       <Container fixed>
         <div className="d-flex">
           <div>
@@ -55,30 +55,31 @@ const NavContent = props => {
           </div>
 
           <div style={styles.nav}>
-            <NavbarToggler onClick={props.toggleNavbar} />
-
-            <Collapse isOpen={props.collapsed} navbar>
-              <Navigation className="ml-auto" navbar>
-                <NavItem>
-                  <NavLink href="/components/">Components</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://github.com/reactstrap/reactstrap">
-                    GitHub
-                  </NavLink>
-                </NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>
-                    Options
-                  </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>Option 1</DropdownItem>
-                    <DropdownItem>Option 2</DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>Reset</DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              </Navigation>
+            <div style={styles.toggler}>
+              <NavbarToggler onClick={props.toggleNavbar} />
+            </div>
+            <Collapse isOpen={!props.collapsed} navbar>
+              <div
+                style={
+                  props.collapsed
+                    ? { backgroundColor: props.transparentBackground }
+                    : { backgroundColor: styles.backgroundColor, padding: '5px'}
+                }
+              >
+                {/* //props.transparentBackground}}> */}
+                <Navigation className="ml-auto" navbar>
+                  <NavItem>
+                    <NavLink href="#problem">
+                      <div style={{ ...props.mainStyle.text }}>Problem</div>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href="#solution">
+                      <div style={{ ...props.mainStyle.text }}>Solution</div>
+                    </NavLink>
+                  </NavItem>
+                </Navigation>
+              </div>
             </Collapse>
           </div>
         </div>
@@ -90,7 +91,8 @@ const NavContent = props => {
 NavContent.propTypes = {
   mainStyle: PropTypes.object,
   toggleNavbar: PropTypes.func.isRequired,
-  collapsed: PropTypes.bool.isRequired
+  collapsed: PropTypes.bool.isRequired,
+  transparentBackground: PropTypes.string.isRequired
 };
 
 export default NavContent;

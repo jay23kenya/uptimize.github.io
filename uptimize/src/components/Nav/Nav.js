@@ -23,7 +23,7 @@ export class Nav extends Component {
     super(props);
 
     this.state = {
-      collapsed: false,
+      collapsed: true,
       transparent: false
     };
     this.toggleNavbar = this.toggleNavbar.bind(this);
@@ -87,6 +87,7 @@ export class Nav extends Component {
                 collapsed={this.state.collapsed}
                 toggleNavbar={this.toggleNavbar}
                 mainStyle={this.props.mainStyle}
+                transparentBackground={styles.transparentBackground.backgroundColor}
               />
             </div>
           ) : (
@@ -95,6 +96,7 @@ export class Nav extends Component {
                 collapsed={this.state.collapsed}
                 toggleNavbar={this.toggleNavbar}
                 mainStyle={this.props.mainStyle}
+                transparentBackground={styles.transparentBackground.backgroundColor}
               />
             </div>
           )}
