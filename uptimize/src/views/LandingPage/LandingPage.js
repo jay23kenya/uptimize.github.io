@@ -54,8 +54,9 @@ export class LandingPage extends Component {
     return (
       <div>
         <Hero mainStyle={mainStyle} />
-        <div id='navStick' style={{ zIndex: 10 }}>
-          <Nav mainStyle={mainStyle} />
+        <div id="navStick" style={{ zIndex: 10 }}>
+          <Nav mainStyle={mainStyle} setNavDiv={this.setNavDiv} />
+
           <Problem mainStyle={mainStyle} />
 
           <div

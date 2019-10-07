@@ -84,7 +84,7 @@ const Problem = props => {
             </Grid>
           </Grid>
         </div>
-        <div className="text-center">
+        <div id='hideHero' className="text-center">
           <ColorButton
             contained
             noRadius

@@ -21,7 +21,7 @@ export class FadeInText extends Component {
     this.changeText = this.changeText.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     let fadeOutDuration = (
       this.props.animationDuration +
       this.props.waitDuration +
@@ -67,6 +67,7 @@ export class FadeInText extends Component {
       },
       () => {
         if (this.state.fadeIn) {
+          console.log('animate')
           this.changeText();
         }
       }

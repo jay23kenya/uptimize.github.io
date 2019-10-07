@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 // import * as _ from "underscore";
 import NavContent from "./NavContent";
 
-
 const styles = {
   whiteBackground: {
     backgroundColor: "white",
@@ -16,7 +15,7 @@ const styles = {
   navbar: {
     width: "100%",
     height: "100px"
-  },
+  }
 };
 
 export class Nav extends Component {
@@ -29,7 +28,7 @@ export class Nav extends Component {
     };
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.setTransparent = this.setTransparent.bind(this);
-    this.handleScroll = this.handleScroll.bind(this)
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   toggleNavbar() {
@@ -37,20 +36,33 @@ export class Nav extends Component {
       collapsed: !this.state.collapsed
     });
   }
+
   componentDidMount = () => {
     window.addEventListener("scroll", () => this.handleScroll());
   };
 
   handleScroll = () => {
     var nav = document.getElementById("nav");
+    var hero = document.getElementById("hero");
     var stickLocation = document.getElementById("navStick").offsetTop;
-    if (window.pageYOffset > stickLocation) {
+    var hideHeroLocation = document.getElementById("hideHero").offsetTop;
+
+    if (window.pageYOffset >= stickLocation) {
       nav.classList.add("fixed-top");
       this.setTransparent(true);
+
     } else {
       nav.classList.remove("fixed-top");
       this.setTransparent(false);
     }
+
+    if (window.pageYOffset >= hideHeroLocation) {
+      hero.classList.add("d-none");
+    } else {
+      hero.classList.remove("d-none");
+    }
+
+
   };
 
   setTransparent(t) {
@@ -67,23 +79,30 @@ export class Nav extends Component {
 
   render() {
     return (
-      <div id="nav">
+      <div>
+        <div id="nav">
+          {this.state.transparent ? (
+            <div style={styles.transparentBackground}>
+              <NavContent
+                collapsed={this.state.collapsed}
+                toggleNavbar={this.toggleNavbar}
+                mainStyle={this.props.mainStyle}
+              />
+            </div>
+          ) : (
+            <div style={styles.whiteBackground}>
+              <NavContent
+                collapsed={this.state.collapsed}
+                toggleNavbar={this.toggleNavbar}
+                mainStyle={this.props.mainStyle}
+              />
+            </div>
+          )}
+        </div>
         {this.state.transparent ? (
-          <div style={styles.transparentBackground}>
-            <NavContent
-              collapsed={this.state.collapsed}
-              toggleNavbar={this.toggleNavbar}
-              mainStyle={this.props.mainStyle}
-            />
-          </div>
+          <div style={{ height: "100px", width: "100%", backgroundColor: 'white' }}></div>
         ) : (
-          <div style={styles.whiteBackground}>
-            <NavContent
-              collapsed={this.state.collapsed}
-              toggleNavbar={this.toggleNavbar}
-              mainStyle={this.props.mainStyle}
-            />
-          </div>
+          <div />
         )}
       </div>
     );

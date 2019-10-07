@@ -43,7 +43,7 @@ const styles = {
 
 const NavContent = props => {
   return (
-    <Navbar className=" h-100" color sticky="top" expand="md">
+    <Navbar className=" h-100" sticky="top" expand="md">
       <Container fixed>
         <div className="d-flex">
           <div>

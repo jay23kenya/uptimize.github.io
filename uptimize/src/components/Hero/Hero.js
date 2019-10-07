@@ -62,7 +62,7 @@ const fadeInText = [
 
 const HeroContent = props => {
   return (
-    <div style={props.lazy ? styles.lazyHero : styles.hero}>
+    <div id='hero' style={props.lazy ? styles.lazyHero : styles.hero}>
       <div style={styles.overlay}>
         <div style={styles.centerDiv}>
           <Container fixed>
