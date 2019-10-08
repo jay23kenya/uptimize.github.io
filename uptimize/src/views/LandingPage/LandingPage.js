@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Teams from '../../components/Teams/Teams'
 import FAQ from '../../components/FAQ/FAQ'
+import Footer from '../../components/Footer/Footer'
 const mainStyle = {
 
 }
@@ -11,6 +12,7 @@ export class LandingPage extends Component {
             <div>
                 <Teams/>
                 <FAQ />
+                <Footer />
             </div>
         )
     }
