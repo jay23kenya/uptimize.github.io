@@ -7,6 +7,9 @@ import FewWords from "../../components/FewWords/FewWords";
 import Packages from "../../components/Packages/Packages";
 import PostFooter from "../../components/Footer/PostFooter";
 import Footer from "../../components/Footer/Footer";
+import Contact from "../../components/Contact/Contact";
+import FAQ from "../../components/FAQ/FAQ";
+import Teams from "../../components/Teams/Teams";
 
 const mainStyle = {
   primaryColor: {
