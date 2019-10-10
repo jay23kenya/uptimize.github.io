@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Container, Grid, Link } from "@material-ui/core";
-// import uptimize from './imagojefj'
 
 const styles = {
     logoWidth: {
-        width: "500px"
+        // width: "500px"
     }
 };
 
@@ -26,17 +25,17 @@ const links = [
 
 const Footer = props => {
   return (
-    <div>
-      <Container fixed>
+    <div className='bg-dark' style={{height: '350px', width: '100%'}}>
+      <Container fixed >
         <Grid container>
-          <Grid item className="d-flex m-3">
-            <div className="mr-3" style={styles.logoWidth}>
+          <Grid item className="d-flex">
+            <div className="" style={styles.logoWidth}>
               logo
               {/* <uptimize /> */}
             </div>
             <div>Copyright</div>
           </Grid>
-          <Grid item className="d-flex m-3">
+          <Grid item className="d-flex">
             {links.map((link, idx) => (
               <div key={idx}>
                 <Link href={link.route} target="_blank">

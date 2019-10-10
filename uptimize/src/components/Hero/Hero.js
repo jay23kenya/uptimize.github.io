@@ -42,13 +42,9 @@ const styles = {
   stick: {
     content: {
       zIndex: -10,
-      position: "fixed",
-      width: "100%"
-    },
-    helper: {
-      height: "100vh",
-      maxWidth: "100%",
-      zIndex: -9
+      position: "sticky",
+      width: "100%",
+      top: 0
     }
   }
 };
@@ -62,7 +58,7 @@ const fadeInText = [
 
 const HeroContent = props => {
   return (
-    <div id='hero' style={props.lazy ? styles.lazyHero : styles.hero}>
+    <div id="hero" style={props.lazy ? styles.lazyHero : styles.hero}>
       <div style={styles.overlay}>
         <div style={styles.centerDiv}>
           <Container fixed>
@@ -72,19 +68,6 @@ const HeroContent = props => {
                 Your Business
               </h1>
               <FadeInText fadeInText={fadeInText} mainStyle={props.mainStyle} />
-              {/* <h2
-              style={{
-                ...props.mainStyle.subHeader,
-                fontSize: "32px",
-                fontWeight: "400"
-              }}
-            >
-              <i>
-                Ensure Results • Connect with Customers • Grow Your Business
-             
-              </i>
-            </h2> */}
-              {/* <Button>Learn More</Button> */}
             </div>
           </Container>
         </div>
@@ -101,8 +84,8 @@ HeroContent.propTypes = {
 
 const Hero = props => {
   return (
-    <div>
-      <div style={styles.stick.content}>
+    <div style={styles.stick.content}>
+      <div >
         <LazyLoad
           once
           height={500}
@@ -112,7 +95,6 @@ const Hero = props => {
           <HeroContent mainStyle={props.mainStyle} />
         </LazyLoad>
       </div>
-      <div style={styles.stick.helper} />
     </div>
   );
 };
@@ -124,3 +106,17 @@ Hero.propTypes = {
 Hero.defaultProps = {};
 
 export default Hero;
+
+/* <h2
+    style={{
+      ...props.mainStyle.subHeader,
+      fontSize: "32px",
+      fontWeight: "400"
+    }}
+  >
+    <i>
+      Ensure Results • Connect with Customers • Grow Your Business
+    
+    </i>
+  </h2> */
+/* <Button>Learn More</Button> */

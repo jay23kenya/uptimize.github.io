@@ -10,8 +10,7 @@ import {
   ListItemText
 } from "@material-ui/core";
 import ColorButton from "../../misc/ColorButton";
-import {ReactComponent as Wade} from '../../images/wade.svg'
-import {ReactComponent as Jay} from '../../images/jay.svg'
+
 
 
 const problems1 = [

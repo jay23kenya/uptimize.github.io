@@ -5,8 +5,8 @@ import Nav from "../../components/Nav/Nav";
 import wavyBackground from '../../images/wavy-bg.svg'
 import FewWords from "../../components/FewWords/FewWords";
 import Packages from "../../components/Packages/Packages";
-
-// import Footer from "../../components/Footer/Footer";
+import PostFooter from "../../components/Footer/PostFooter";
+import Footer from "../../components/Footer/Footer";
 
 const mainStyle = {
   primaryColor: {
@@ -72,9 +72,9 @@ export class LandingPage extends Component {
           <Problem mainStyle={mainStyle} />
           <div style={mainStyle.wavyDiv}>
           <FewWords mainStyle={mainStyle} />
-          <Packages mainStyle={mainStyle}/>
+    
           </div>
-          {/* <Packages mainStyle={mainStyle}/> */}
+          <Packages mainStyle={mainStyle}/>
 
 
           <div
@@ -84,8 +84,10 @@ export class LandingPage extends Component {
               backgroundColor: "white"
             }}
           />
-          {/* <Footer mainStyle={mainStyle} /> */}
+          <Footer mainStyle={mainStyle} />
+           <PostFooter mainStyle={mainStyle} />
         </div>
+       
       </div>
     );
   }
