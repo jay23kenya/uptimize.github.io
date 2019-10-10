@@ -73,6 +73,11 @@ export class LandingPage extends Component {
           <div style={mainStyle.wavyDiv}>
           <FewWords mainStyle={mainStyle} />
           <Packages mainStyle={mainStyle}/>
+      
+                  <Teams mainStyle={mainStyle} />
+                <FAQ mainStyle={mainStyle} />
+                <Footer mainStyle={mainStyle} />
+                <Contact mainStyle={mainStyle} />
           </div>
           {/* <Packages mainStyle={mainStyle}/> */}
 

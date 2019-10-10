@@ -1,7 +1,8 @@
+
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Grid, Link } from "@material-ui/core";
-// import uptimize from './imagojefj'
+import { Container, Grid, Link, BottomNavigation } from "@material-ui/core";
+
 
 const styles = {
     logoWidth: {
@@ -26,36 +27,25 @@ const links = [
 
 const Footer = props => {
   return (
-    <div>
-      <Container fixed>
-        <Grid container>
-          <Grid item className="d-flex m-3">
-            <div className="mr-3" style={styles.logoWidth}>
-              logo
-              {/* <uptimize /> */}
-            </div>
-            <div>Copyright</div>
-          </Grid>
-          <Grid item className="d-flex m-3">
-            {links.map((link, idx) => (
-              <div key={idx}>
-                <Link href={link.route} target="_blank">
-                  {link.linkText}
-                </Link>
-              </div>
-            ))}
-          </Grid>
-        </Grid>
-      </Container>
+       <div>
+       <Container fixed>
+       <footer>
+      <div class="mui-container mui--text-center">
+     <h2>© Copyright Uptimize Digital Marketing. All Rights Reserved.</h2> 
+        <h2>Uptimize LLC</h2>
+      </div>
+    </footer>
+        </Container>  
     </div>
   );
 };
 
 Footer.propTypes = {
   mainStyle: PropTypes.object,
-  hello: PropTypes.func.isRequired
 };
 
 Footer.defaultProps = {};
 
 export default Footer;
+
+
