@@ -4,6 +4,7 @@ import Problem from "../../components/Problem/Problem";
 import Nav from "../../components/Nav/Nav";
 import wavyBackground from '../../images/wavy-bg.svg'
 import FewWords from "../../components/FewWords/FewWords";
+import Packages from "../../components/Packages/Packages";
 
 // import Footer from "../../components/Footer/Footer";
 
@@ -28,7 +29,7 @@ const mainStyle = {
   text: {
     color: 'black',
     fontFamily: "Montserrat, 'Proza Libre', sans-serif",
-    fontSize: "22px",
+    fontSize: "18px",
     fontWeight: 400
   },
   button: {
@@ -65,15 +66,16 @@ export class LandingPage extends Component {
     return (
       <div>
         <Hero mainStyle={mainStyle} />
-        <div id="navStick" style={{ zIndex: 10 }}>
+        <div id="navStick" style={{ zIndex: 10, backgroundImage: 'none' }}>
           <Nav mainStyle={mainStyle} setNavDiv={this.setNavDiv} />
 
           <Problem mainStyle={mainStyle} />
           <div style={mainStyle.wavyDiv}>
-
           <FewWords mainStyle={mainStyle} />
-
+          <Packages mainStyle={mainStyle}/>
           </div>
+          {/* <Packages mainStyle={mainStyle}/> */}
+
 
           <div
             style={{

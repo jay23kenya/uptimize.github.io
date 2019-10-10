@@ -9,7 +9,6 @@ import {
   NavItem,
   NavLink
 } from "reactstrap";
-
 import { ReactComponent as Logo } from "../../images/logo.svg";
 import { Container } from "@material-ui/core";
 
@@ -47,7 +46,7 @@ const NavContent = props => {
       <Container fixed>
         <div className="d-flex">
           <div>
-            <NavbarBrand href="/">
+            <NavbarBrand href="/" title='The best marketing team in Tampa, Florida. Uptimize Digital Marketing.'>
               <div style={styles.logo.position}>
                 <Logo height={styles.logo.height} width={styles.logo.width} />
               </div>
@@ -69,12 +68,12 @@ const NavContent = props => {
                 {/* //props.transparentBackground}}> */}
                 <Navigation className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink href="#problem">
+                    <NavLink href="#problem" title='Problem'>
                       <div style={{ ...props.mainStyle.text, fontSize: '14px' }}>Problem</div>
                     </NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="#solution">
+                    <NavLink href="#solution" title='Solution'>
                       <div style={{ ...props.mainStyle.text, fontSize: '14px'  }}>Solution</div>
                     </NavLink>
                   </NavItem>

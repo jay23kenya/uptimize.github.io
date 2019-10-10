@@ -10,6 +10,9 @@ import {
   ListItemText
 } from "@material-ui/core";
 import ColorButton from "../../misc/ColorButton";
+import {ReactComponent as Wade} from '../../images/wade.svg'
+import {ReactComponent as Jay} from '../../images/jay.svg'
+
 
 const problems1 = [
   "Is explaining what you do complicated?",
@@ -27,7 +30,8 @@ const Problem = props => {
   return (
     <div
       style={{
-        ...props.mainStyle.alternateBackgroundColor,
+        // ...props.mainStyle.alternateBackgroundColor,
+        backgroundColor: 'white',
         ...props.mainStyle.section
       }}
     >
@@ -99,6 +103,9 @@ const Problem = props => {
             Learn More
           </ColorButton>
         </div>
+        {/* <Wade height='500px' width='500px' /> */}
+        {/* <Jay height='500px' width='500px' /> */}
+
       </Container>
     </div>
   );

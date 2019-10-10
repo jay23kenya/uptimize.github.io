@@ -80,24 +80,26 @@ const FewWords = props => {
               once
               height={100}
               placeholder={
-                <img
-                  src={teamLazy}
-                  alt="Wade, Amer, Jay"
-                  style={{ maxWidth: "100%", ...styles.shadow }}
-                />
-              }
-            >
-              <ScrollAnimation
+                <ScrollAnimation
                 animateIn="fadeIn"
                 animateOnce
                 initiallyVisible={false}
               >
                 <img
+                  src={teamLazy}
+                  alt="Wade, Amer, Jay"
+                  style={{ maxWidth: "100%", ...styles.shadow }}
+                />
+                  </ScrollAnimation>
+              }
+            >
+            
+                <img
                   src={team}
                   alt="Wade, Amer, Jay"
                   style={{ maxWidth: "100%", ...styles.shadow }}
                 />
-              </ScrollAnimation>
+            
             </LazyLoad>
           </Grid>
         </Grid>
