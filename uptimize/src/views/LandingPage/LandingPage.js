@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Hero from "../../components/Hero/Hero";
 import Problem from "../../components/Problem/Problem";
 import Nav from "../../components/Nav/Nav";
-import wavyBackground from '../../images/wavy-bg.svg'
+import wavyBackground from "../../images/wavy-bg.svg";
 import FewWords from "../../components/FewWords/FewWords";
 import Packages from "../../components/Packages/Packages";
 import PostFooter from "../../components/Footer/PostFooter";
@@ -27,7 +27,7 @@ const mainStyle = {
     letterSpacing: "0px"
   },
   text: {
-    color: 'black',
+    color: "black",
     fontFamily: "Montserrat, 'Proza Libre', sans-serif",
     fontSize: "18px",
     fontWeight: 400
@@ -50,14 +50,14 @@ const mainStyle = {
   section: {
     paddingTop: "75px",
     paddingBottom: "75px"
-  }, 
+  },
   wavyDiv: {
     backgroundImage: `url(${wavyBackground})`,
-    height: '100%',
-    width: '100%',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundColor: 'white'
+    height: "100%",
+    width: "100%",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundColor: "white"
   }
 };
 
@@ -66,16 +66,18 @@ export class LandingPage extends Component {
     return (
       <div>
         <Hero mainStyle={mainStyle} />
-        <div id="navStick" style={{ zIndex: 10, backgroundImage: 'none' }}>
+        <div id="navStick" style={{ zIndex: 10, backgroundImage: "none" }}>
           <Nav mainStyle={mainStyle} setNavDiv={this.setNavDiv} />
 
           <Problem mainStyle={mainStyle} />
           <div style={mainStyle.wavyDiv}>
-          <FewWords mainStyle={mainStyle} />
-    
+            <FewWords mainStyle={mainStyle} />
           </div>
-          <Packages mainStyle={mainStyle}/>
-
+            <Packages mainStyle={mainStyle} />
+            <Teams mainStyle={mainStyle} />
+            <FAQ mainStyle={mainStyle} />
+            <Footer mainStyle={mainStyle} />
+            <Contact mainStyle={mainStyle} />
 
           <div
             style={{
@@ -85,9 +87,8 @@ export class LandingPage extends Component {
             }}
           />
           <Footer mainStyle={mainStyle} />
-           <PostFooter mainStyle={mainStyle} />
+          <PostFooter mainStyle={mainStyle} />
         </div>
-       
       </div>
     );
   }
