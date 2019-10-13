@@ -80,6 +80,8 @@ body {
 
 .team-hover {
     text-align: center;
+    align-content: center;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -101,7 +103,7 @@ body {
 .team-hover .desk {
     position: absolute;
     top: 0%;
-    width: 25%;
+    width: 100%;
     opacity: 0;
     -webkit-transform: translateY(-55%);
     -ms-transform: translateY(-55%);
@@ -123,7 +125,7 @@ body {
 .team-hover .s-link {
     position: absolute;
     bottom: 0;
-    width: 25%;
+    width: 100%;
     opacity: 0;
     text-align: center;
     -webkit-transform: translateY(45%);
@@ -147,16 +149,19 @@ body {
     padding: 20px 0;
     display: inline-block;
     letter-spacing: 2px;
-    width: 25%;
+    width: 100%;
+    text-align: center
 }
 .team-title h5 {
     margin-bottom: 0px;
     display: block;
     text-transform: uppercase;
+    text-align: center;
 }
 .team-title span {
     font-size: 12px;
     text-transform: uppercase;
     color: #a5a5a5;
     letter-spacing: 1px;
+    text-align: center;
 }

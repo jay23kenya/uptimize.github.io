@@ -55,10 +55,16 @@ const Teams2 = () => {
                     <h4>{fullNames[j]}</h4>
                     <p>{titles[j]}</p>
                   </div>
+                  <div class="s-link">
+                                        <a href="#"><i class="fa fa-facebook"><FacebookIcon /></i></a>
+                                        <a href="#"><i class="fa fa-twitter"><InstagramIcon/></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"><CodeIcon/></i></a>
+                                    </div>
                 </div>
                 <div class="team-title">
                   <h5>{fullNames[j]}</h5>
                   <span>{titles[j]}</span>
+                  
                 </div>
               </div>
             </CardActionArea>
