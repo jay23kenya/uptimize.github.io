@@ -21,15 +21,37 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import "./style.css";
 
-const names = ["Amer", "Wade", "Jay", "Alejandro"];
-const fullNames = ["Amer Abdelaziz", "Wade Smith", "Jay Patel", "Alejandro "];
-const titles = [
-  "Founder/CEO",
-  "Co-Founder/President",
-  "Web Development Manager",
-  "Design Manager"
-];
-const images = [Amer, Wade, Jay, alejandro];
+const teamMembers = [
+    {
+        name: "Amer",
+        fullName: "Amer Abdelaziz",
+        title: "CEO / Founder",
+        image: Amer,
+    },
+    {
+        name: "Jay",
+        fullName: "Jay Patel",
+        title: "Web Development Manager",
+        image: Jay,
+
+    },
+    {
+        name: "Wade",
+        fullName: "Wade Smith",
+        title: "Co-Founder / President",
+        image: Wade,
+
+
+    },
+    {
+        name: "Alejandro",
+        fullName: "Alejandro",
+        title: "Design Manager",
+        image: alejandro,
+
+
+    },
+]
 
 const Teams2 = () => {
   let j = 0;

@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { black } from 'ansi-colors';
-
+import ColorButton from "../../misc/ColorButton";
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#00ff00",
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: '80%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
   submit: {
@@ -42,9 +42,13 @@ const useStyles = makeStyles(theme => ({
     width: "50%",
     textAlign: "center",
   },
+  shadow: {
+    boxShadow:
+      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+  }
 }));
 
-export default function Contact() {
+export default function Contact(props) {
   const classes = useStyles();
 
   return (
@@ -52,12 +56,12 @@ export default function Contact() {
     <Container component="main" maxWidth="md" style={{"backgroundColor" : "#f7f7f7"}}>
       <CssBaseline />
       <div className={classes.paper}>     
-        <Typography component="h1" variant="h3">
-          Contact us
-        </Typography><br />
-        <Typography component="h5" variant="h5">
-          We'd love to hear from you!
-        </Typography><br />
+          <div style={{...props.mainStyle.header}}>
+            Contact Us
+          </div>                
+        <div style={{...props.mainStyle.subHeader}}>We'd love to hear from you!</div>
+         
+        
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
             <Grid item xs={12} >
@@ -110,15 +114,20 @@ export default function Contact() {
          
           </Grid>
           <br />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            Send
-          </Button>       
+          <div className="m-3">
+                <ColorButton
+                  contained
+                  noRadius
+                  color={props.mainStyle.buttonColor.color}
+                  hoverColor={props.mainStyle.buttonColor.hoverColor}
+                  style={{
+                    ...props.mainStyle.contactButton,
+                    ...props.mainStyle.button
+                  }}
+                >
+                    Get Started
+                </ColorButton>
+              </div>     
         </form>
       </div>  
     </Container>
