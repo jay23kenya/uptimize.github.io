@@ -14,12 +14,29 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { black } from 'ansi-colors';
 import ColorButton from "../../misc/ColorButton";
-
+import { ReactComponent as Amer } from "../../images/amer.svg";
+import LazyLoad from "react-lazyload";
+import ScrollAnimation from "react-animate-on-scroll";
+const footerHeight = 300;
 const useStyles = makeStyles(theme => ({
   '@global': {
     body: {
       backgroundColor: theme.palette.common.white,
     },
+  },
+  img1: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    maxHeight: `${footerHeight}px`,
+    minHeight: "1%"
+  },
+  img2: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    maxHeight: `${footerHeight}px`,
+    minHeight: "1%"
   },
   paper: {
     marginTop: theme.spacing(8),
@@ -113,6 +130,20 @@ export default function Contact(props) {
             </Grid>
          
           </Grid>
+          <Grid item xs={3} md={4}>
+          <LazyLoad once height={200} offset={[0, 200]}>
+           
+            <div style={classes.container}>
+              <Amer
+                style={classes.img2}
+
+                //   height={"100%"}
+                //  width={"50%"}
+              />
+              </div>
+       
+          </LazyLoad>
+        </Grid>
           <br />
           <div className="m-3">
                 <ColorButton
