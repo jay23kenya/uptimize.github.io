@@ -140,7 +140,8 @@ export class FadeInText extends Component {
                 hoverColor={this.props.mainStyle.buttonColor.hoverColor}
                 style={{
                   ...this.props.mainStyle.bigButton,
-                  ...this.props.mainStyle.button
+                  ...this.props.mainStyle.button,
+                  position: 'relative'
                 }}
               >
                 Learn More

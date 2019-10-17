@@ -7,3 +7,16 @@ footer {
     padding-top: 35px;
     text-align: center;
   }
+
+  #footer {
+    height: 350px;;
+    width: 100%;
+    z-index: 10000;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  #postFooter {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+  }

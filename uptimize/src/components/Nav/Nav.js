@@ -47,9 +47,9 @@ export class Nav extends Component {
     var hideHeroLocation = document.getElementById("hideHero").offsetTop;
 
     if (window.pageYOffset >= hideHeroLocation) {
-      hero.classList.add("d-none");
+      // hero.classList.add("d-none");
     } else {
-      hero.classList.remove("d-none");
+      // hero.classList.remove("d-none");
     }
 
   };

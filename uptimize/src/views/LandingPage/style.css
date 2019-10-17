@@ -1,0 +1,9 @@
+#wavyDiv { 
+    background-color: white; 
+    background-image: url(../../images/wavy-bg.svg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 11;
+  }

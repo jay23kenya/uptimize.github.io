@@ -83,6 +83,7 @@ const FewWords = props => {
               placeholder={
               
                 <img
+                  
                   src={teamLazy}
                   alt="Wade, Amer, Jay"
                   style={{ maxWidth: "100%", ...styles.shadow }}

@@ -26,7 +26,8 @@ const styles = {
     width: "100%",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    position: "relative"
   },
   overlay: {
     backgroundColor: "rgb(0, 0, 0, .6)",
@@ -41,10 +42,11 @@ const styles = {
   },
   stick: {
     content: {
-      zIndex: -10,
-      position: "sticky",
+      position: "-webkit-fixed",
+      position: "fixed",
       width: "100%",
-      top: 0
+      top: 0,
+      zIndex: 0
     }
   }
 };
@@ -58,7 +60,11 @@ const fadeInText = [
 
 const HeroContent = props => {
   return (
-    <div id="hero" style={props.lazy ? styles.lazyHero : styles.hero}>
+    <div
+      id="hero"
+      className={props.className}
+      style={props.lazy ? styles.lazyHero : styles.hero}
+    >
       <div style={styles.overlay}>
         <div style={styles.centerDiv}>
           <Container fixed>
@@ -79,13 +85,14 @@ const HeroContent = props => {
 HeroContent.propTypes = {
   //If true lazy load the hero background
   lazy: PropTypes.bool,
-  mainStyle: PropTypes.object
+  mainStyle: PropTypes.object,
+  className: PropTypes.string
 };
 
 const Hero = props => {
   return (
     <div style={styles.stick.content}>
-      <div >
+      <div>
         <LazyLoad
           once
           height={500}

@@ -5,6 +5,7 @@ import { ReactComponent as Amer } from "../../images/amer.svg";
 import ColorButton from "../../misc/ColorButton";
 import LazyLoad from "react-lazyload";
 import "./responsive.css";
+import zIndex from "@material-ui/core/styles/zIndex";
 
 const styles = {
   image: {
@@ -37,7 +38,7 @@ const CallToAction = props => (
       <div className="d-flex" style={styles.shadow}>
         <div id="amerDiv" style={styles.amerDiv}>
           <LazyLoad once height={200} offset={[-500, 500]}>
-            <Amer style={styles.image} />
+            <Amer className='animated fadeIn' style={styles.image} />
           </LazyLoad>
         </div>
         <div className="text-center" style={styles.center}>

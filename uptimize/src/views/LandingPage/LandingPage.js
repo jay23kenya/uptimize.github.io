@@ -5,12 +5,10 @@ import Nav from "../../components/Nav/Nav";
 import wavyBackground from "../../images/wavy-bg.svg";
 import FewWords from "../../components/FewWords/FewWords";
 import Packages from "../../components/Packages/Packages";
-import PostFooter from "../../components/Footer/PostFooter";
 import Footer from "../../components/Footer/Footer";
-import Contact from "../../components/Contact/Contact";
-import FAQ from "../../components/FAQ/FAQ";
 import Teams from "../../components/Teams/Teams";
 import CallToAction from "../../components/CallToAction/CallToAction";
+import "./style.css";
 
 const mainStyle = {
   primaryColor: {
@@ -49,14 +47,14 @@ const mainStyle = {
     padding: "14px 36px"
   },
   alternateBackgroundColor: {
-    backgroundColor: "#eff2f6"//"#f7f9fc"
+    backgroundColor: "#eff2f6" //"#f7f9fc"
   },
   section: {
     paddingTop: "75px",
     paddingBottom: "75px"
   },
-  wavyDiv: { 
-    backgroundColor: "white", 
+  wavyDiv: {
+    backgroundColor: "white",
     backgroundImage: `url(${wavyBackground})`,
     height: "100%",
     width: "100%",
@@ -71,31 +69,33 @@ export class LandingPage extends Component {
     return (
       <div>
         <Hero mainStyle={mainStyle} />
+        <div style={{ height: "100vh", maxWidth: "100%", zIndex: -9 }} />
         <div style={{ zIndex: 10 }}>
-          <Nav mainStyle={mainStyle} setNavDiv={this.setNavDiv} />
-          <Problem mainStyle={mainStyle} />
-          <CallToAction mainStyle={mainStyle} />
-          {/* Services */}
-          <div style={mainStyle.wavyDiv}>
-            <FewWords mainStyle={mainStyle} />
-            <Packages mainStyle={mainStyle} />
-          </div>
-          
-            
-            <Teams mainStyle={mainStyle} />
-            {/* Download */}
-
-            {/* Other views */}
-            {/* <FAQ mainStyle={mainStyle} />
+          <Nav mainStyle={mainStyle} />
+          <div style={{ position: "relative", backgroundColor: "white"  }}>
+              <Problem mainStyle={mainStyle} />
+              <CallToAction mainStyle={mainStyle} />
+              {/* Services */}
+             
+                <div id="wavyDiv">
+                  <FewWords mainStyle={mainStyle} />
+                  <Packages mainStyle={mainStyle} />
+                </div>
+       
+              <Teams mainStyle={mainStyle} />
+              {/* Download */}
+              {/* Other views */}
+              {/* <FAQ mainStyle={mainStyle} />
             <Contact mainStyle={mainStyle} /> */}
-
-          {/* <div
+              {/* <div
             style={{
               height: "1000px",
               width: "100%",
               backgroundColor: "white"
             }}
           /> */}
+      
+          </div> 
           <Footer mainStyle={mainStyle} />
           {/* <PostFooter mainStyle={mainStyle} /> */}
         </div>

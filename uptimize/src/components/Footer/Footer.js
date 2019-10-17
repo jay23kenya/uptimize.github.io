@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Grid, Link, BottomNavigation } from "@material-ui/core";
 import PostFooter from "./PostFooter";
+import './style.css'
 
 const styles = {
   logoWidth: {
@@ -10,17 +11,15 @@ const styles = {
   footer: {
     height: "350px",
     width: "100%",
-    zIndex: 1
+    zIndex: 10000,
+    position: "-webkit-sticky",
+    position: "sticky",
   },
   postFooter: {
     position: "-webkit-sticky",
     position: "sticky",
-    width: "100%",
-    backgroundColor: "white",
-     zIndex: -1,
     bottom: 0,
-    maxWidth: '100%'
-  }
+  },
 };
 
 const links = [
@@ -40,8 +39,8 @@ const links = [
 
 const Footer = props => {
   return (
-    <div>
-      <div className="bg-dark" style={styles.footer}>
+    <div style={{position: 'relative', backgroundColor: 'white'}}>
+      <div className="bg-dark" id='footer'>
         <Container fixed>
           <footer>
             <div class="mui-container mui--text-center">
@@ -53,7 +52,7 @@ const Footer = props => {
           </footer>
         </Container>
       </div>
-      <div style={styles.postFooter}>
+      <div id='postFooter' >
         <PostFooter mainStyle={props.mainStyle} />
       </div>
     </div>
