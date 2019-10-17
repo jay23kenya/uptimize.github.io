@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ReactComponent as Amer } from "../../images/amer.svg";
 import { ReactComponent as Wade } from "../../images/wade.svg";
 import { ReactComponent as Jay } from "../../images/jay.svg";
 import LazyLoad from "react-lazyload";
@@ -16,14 +15,14 @@ const styles = {
     height: `${footerHeight}px`,
     width: "100%",
     backgroundColor: "white",
-    zIndex: -1000,
+     zIndex: 10,
     bottom: 0,
     maxWidth: '100%'
   },
   container: {
     position: "relative",
     height: `${footerHeight}px`,
-    width: "100%",
+    width: "100%"
 
   },
   img1: {
@@ -31,7 +30,8 @@ const styles = {
     bottom: 0,
     right: 0,
     maxHeight: `${footerHeight}px`,
-    minHeight: "1%"
+    minHeight: "100%",
+    
   },
   img2: {
     position: "absolute",
@@ -41,6 +41,7 @@ const styles = {
     minHeight: "1%"
   },
   callToAction: {
+    zIndex: 0,
     borderRadius: "5px",
     border: '1px #555',
     //boxShadow: '0 0 30px rgba(0, 0, 0, 0.6)',
@@ -50,6 +51,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    
 
   }
 };
@@ -59,9 +61,9 @@ const PostFooter = props => {
     <div style={{ ...styles.root }}>
       {/* <Container fixed style={styles.container}> */}
       <Grid container spacing={0} justifty="center">
-        <Grid style={{}} item xs={3} md={4}>
+        <Grid style={{zIndex: -1}} item xs={4} md={4}>
           <LazyLoad once height={200} offset={[0, 200]}>
-            <ScrollAnimation animateIn="slideInUp" initiallyVisible={false}>
+            <ScrollAnimation animateIn="slideInRight" initiallyVisible={false}>
               <div style={styles.container}>
                 <Wade
                   style={styles.img1}
@@ -73,7 +75,7 @@ const PostFooter = props => {
             </ScrollAnimation>
           </LazyLoad>
         </Grid>
-        <Grid item xs={6} md={4} style={{backgroundColor: ''}}>
+        <Grid item xs={8} md={4}>
           <Paper style={styles.callToAction}>
             <div style={{ display: "block-inline" }}>
               <div className="text-center mb-3 px-2">
@@ -88,6 +90,7 @@ const PostFooter = props => {
                   hoverColor={props.mainStyle.buttonColor.hoverColor}
                   style={{
                     // ...props.mainStyle.bigButton,
+                    zIndex: 0,
                     padding: '14px',
                     fontSize: '18px',
                     ...props.mainStyle.button
@@ -100,20 +103,20 @@ const PostFooter = props => {
           </Paper>
         </Grid>
 
-        <Grid item xs={3} md={4}>
+        {/* <Grid item xs={3} md={4}>
           <LazyLoad once height={200} offset={[0, 200]}>
             <ScrollAnimation animateIn="slideInUp" initiallyVisible={false}>
             <div style={styles.container}>
-              <Jay
+              {/* <Jay
                 style={styles.img2}
 
                 //   height={"100%"}
                 //  width={"50%"}
-              />
+              /> 
               </div>
             </ScrollAnimation>
           </LazyLoad>
-        </Grid>
+        </Grid> */}
       </Grid>
       {/* </Container> */}
     </div>

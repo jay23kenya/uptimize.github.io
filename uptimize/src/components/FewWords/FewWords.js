@@ -32,11 +32,11 @@ const FewWords = props => {
                 Few Words About Us
               </h1>
             </div>
-            <ScrollAnimation
+            {/* <ScrollAnimation
               animateIn="fadeInLeft"
               initiallyVisible={false}
               animateOnce
-            >
+            > */}
               <div className="m-3" style={{ maxWidth: "500px" }}>
                 <p style={{...props.mainStyle.text, fontSize: '18px'}}>
                   We are a Digital Marketing Company with a primary focus on
@@ -44,7 +44,7 @@ const FewWords = props => {
                   have a strategic system in place which allows us to <b>get high
                   quality leads to convert</b>. We're comprised of Computer
                   Engineers and Computer Scientists with extensive marketing
-                  experience. We've developed a Lead Management System soley for
+                  experience. We've developed a <b>Lead Management System</b> soley for
                   our clients which will allow you to have the proper resources
                   to <b>keep your leads organized</b> and it also provides analytics
                   which emphasizes the <b>importance of contacting leads in a
@@ -52,7 +52,7 @@ const FewWords = props => {
                   seemless marketing experience!
                 </p>
               </div>
-            </ScrollAnimation>
+            {/* </ScrollAnimation> */}
             <ScrollAnimation
               animateIn="fadeInUp"
               animateOnce
@@ -78,19 +78,16 @@ const FewWords = props => {
           <Grid item xs={12} md={6} className="mt-auto mb-auto">
             <LazyLoad
               once
-              height={100}
+              height={200}
+              offset={[-200, 200]}
               placeholder={
-                <ScrollAnimation
-                animateIn="fadeIn"
-                animateOnce
-                initiallyVisible={false}
-              >
+              
                 <img
                   src={teamLazy}
                   alt="Wade, Amer, Jay"
                   style={{ maxWidth: "100%", ...styles.shadow }}
                 />
-                  </ScrollAnimation>
+  
               }
             >
             

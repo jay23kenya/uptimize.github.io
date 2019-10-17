@@ -29,8 +29,7 @@ const Problem = props => {
   return (
     <div
       style={{
-        // ...props.mainStyle.alternateBackgroundColor,
-        backgroundColor: 'white',
+        ...props.mainStyle.alternateBackgroundColor,
         ...props.mainStyle.section
       }}
     >

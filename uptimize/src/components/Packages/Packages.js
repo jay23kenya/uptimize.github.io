@@ -43,7 +43,7 @@ const package3 = {
 
 const Packages = props => {
   return (
-    <div style={{...props.mainStyle.section, backgroundColor: 'white'}}>
+    <div style={{...props.mainStyle.section}}>
       <Container fixed>
         <div className="text-center mb-5">
           <h2 style={{ ...props.mainStyle.subHeader }}>Our Pricing</h2>

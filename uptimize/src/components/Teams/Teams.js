@@ -20,8 +20,8 @@ import CodeIcon from "@material-ui/icons/Code";
 import IconButton from "@material-ui/core/IconButton";
 import { CardHeader } from '@material-ui/core';
 
-const Teams = () => (
-  <div>
+const Teams = props => (
+  <div style={{...props.mainStyle.section, backgroundColor: 'white'}}>
     <Container fixed>
         <h1 style={{textAlign: "center"}}>Meet The Team</h1>
       <Grid container spacing={4}>

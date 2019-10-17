@@ -50,7 +50,7 @@ export default function Contact() {
   return (
       
     <Container component="main" maxWidth="md" style={{"backgroundColor" : "#f7f7f7"}}>
-      <CssBaseline />
+      {/* <CssBaseline />
       <div className={classes.paper}>     
         <Typography component="h1" variant="h3">
           Contact us
@@ -120,7 +120,7 @@ export default function Contact() {
             Send
           </Button>       
         </form>
-      </div>  
+      </div>   */}
     </Container>
   );
 }

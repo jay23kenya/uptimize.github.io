@@ -1,0 +1,23 @@
+@media only screen and (max-width: 999px) {
+    #amerDiv {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    #header {
+       max-width: 500px;
+    }
+    #subHeader {
+        max-width: 500px;
+    }
+}
+
+@media only screen and (min-width: 1281px) {
+    #header {
+       max-width: 700px;
+    }
+    #subHeader {
+        max-width: 700px;
+    }
+}

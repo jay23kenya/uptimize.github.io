@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {
   Paper,
@@ -8,7 +8,8 @@ import {
   ListItemText,
   SvgIcon
 } from "@material-ui/core";
-import ColorButton from '../../misc/ColorButton'
+import ColorButton from "../../misc/ColorButton";
+import "./style.css";
 
 const styles = {
   price: {
@@ -34,11 +35,6 @@ const styles = {
     padding: "35px",
     borderRadius: "5px 5px 0 0"
   },
-
-  package: {
-    borderRadius: "5px",
-    boxShadow: "0 0 25px 0 rgba(0, 0, 0, 0.15)",
-  },
   gradientLine: {
     height: "10px",
     background: "linear-gradient(90deg,#03fc7f, #aaa)",
@@ -58,13 +54,17 @@ const styles = {
     background: "-webkit-linear-gradient(gold, #aaa)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent"
+  },
+  gold: {
+    color: "#ffd700",
+    hoverColor: "#D4AF37"
   }
 };
 
 const Package = props => {
   return (
     <div style={props.recommended ? styles.recommended : {}}>
-      <Paper className="text-center" style={styles.package}>
+      <Paper className="text-center" id="package">
         <div>
           <div style={{ ...styles.title }}>
             <h3
@@ -133,7 +133,11 @@ const Package = props => {
                 <ListItemIcon>
                   <SvgIcon>
                     <path
-                      fill={props.mainStyle.secondaryColor.color}
+                      fill={
+                        props.recommended
+                          ? styles.gold.color
+                          : props.mainStyle.secondaryColor.color
+                      }
                       d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
                     />
                   </SvgIcon>
@@ -151,14 +155,22 @@ const Package = props => {
             ))}
           </List>
         </div>
-        <div className='text-center mt-3 pb-3'>
-        <ColorButton
+        <div className="text-center mt-3 pb-3">
+          <ColorButton
             contained={props.recommended}
             outline={!props.recommended}
             noRadius
             // textColor="white"
-            color={props.mainStyle.buttonColor.color}
-            hoverColor={props.mainStyle.buttonColor.hoverColor}
+            color={
+              props.recommended
+                ? styles.gold.color
+                : props.mainStyle.buttonColor.color
+            }
+            hoverColor={
+              props.recommended
+                ? styles.gold.hoverColor
+                : props.mainStyle.buttonColor.hoverColor
+            }
             style={{
               ...props.mainStyle.bigButton,
               ...props.mainStyle.button
