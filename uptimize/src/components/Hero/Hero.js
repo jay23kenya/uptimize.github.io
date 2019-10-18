@@ -5,6 +5,7 @@ import backgroundImage from "../../images/HeroImage.jpg";
 import lazyBackgroundImage from "../../images/HeroImage-min.jpg";
 import LazyLoad from "react-lazyload";
 import FadeInText from "./FadeInText";
+import './style.css'
 
 const styles = {
   hero: {
@@ -40,15 +41,7 @@ const styles = {
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent"
   },
-  stick: {
-    content: {
-      position: "-webkit-fixed",
-      position: "fixed",
-      width: "100%",
-      top: 0,
-      zIndex: 0
-    }
-  }
+
 };
 
 const fadeInText = [
@@ -91,7 +84,7 @@ HeroContent.propTypes = {
 
 const Hero = props => {
   return (
-    <div style={styles.stick.content}>
+    <div id='stick'>
       <div>
         <LazyLoad
           once

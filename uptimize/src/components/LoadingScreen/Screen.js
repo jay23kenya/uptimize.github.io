@@ -1,5 +1,4 @@
 import React from "react";
-import { CircularProgress } from "@material-ui/core";
 import LazyLoad from "react-lazyload";
 import { ReactComponent as Logo } from "../../images/shortLogo.svg";
 

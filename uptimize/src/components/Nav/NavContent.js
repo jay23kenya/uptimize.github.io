@@ -30,15 +30,7 @@ const styles = {
     marginBottom: "auto",
     marginTop: "auto"
   },
-  bigNav: {
-    padding: "15px",
-    marginLeft: "auto",
-    marginBottom: "auto",
-    marginTop: "auto"
-  },
-  toggler: {
-    // backgroundColor: backgroundColor,
-  }
+
 };
 
 const navLinks = [

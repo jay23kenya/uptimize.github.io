@@ -3,20 +3,16 @@ import PropTypes from "prop-types";
 import { ReactComponent as Wade } from "../../images/wade.svg";
 // import { ReactComponent as Jay } from "../../images/jay.svg";
 import LazyLoad from "react-lazyload";
-import ScrollAnimation from "react-animate-on-scroll";
 import { Grid, Paper } from "@material-ui/core";
 import ColorButton from "../../misc/ColorButton";
 
 const footerHeight = 300;
 const styles = {
   root: {
-    position: "-webkit-sticky",
-    position: "sticky",
     height: `${footerHeight}px`,
     width: "100%",
     backgroundColor: "white",
     zIndex: 0,
-    bottom: 0,
     maxWidth: '100%'
   },
   container: {

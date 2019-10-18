@@ -12,12 +12,7 @@ const styles = {
     height: "350px",
     width: "100%",
     zIndex: 10000,
-  },
-  postFooter: {
-    position: "-webkit-sticky",
-    position: "sticky",
-    bottom: 0,
-  },
+  }
 };
 
 const links = [

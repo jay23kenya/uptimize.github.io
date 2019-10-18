@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Grid } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import { ReactComponent as Amer } from "../../images/amer.svg";
 import ColorButton from "../../misc/ColorButton";
 import LazyLoad from "react-lazyload";
 import "./responsive.css";
-import zIndex from "@material-ui/core/styles/zIndex";
+
 
 const styles = {
   image: {
