@@ -10,7 +10,7 @@ import {
   NavLink
 } from "reactstrap";
 import { ReactComponent as Logo } from "../../images/logo.svg";
-import { Container, Hidden } from "@material-ui/core";
+import { Container, Hidden, ClickAwayListener } from "@material-ui/core";
 import ColorButton from "../../misc/ColorButton";
 
 const backgroundColor = "white";
@@ -81,9 +81,11 @@ const NavContent = props => {
           </div>
 
           <div style={styles.nav}>
-            <div style={styles.toggler}>
-              <NavbarToggler onClick={props.toggleNavbar} />
-            </div>
+            <ClickAwayListener onClickAway={props.handleClickAway}>
+              <div style={styles.toggler}>
+                <NavbarToggler onClick={props.toggleNavbar} />
+              </div>
+            </ClickAwayListener>
             <Collapse isOpen={!props.collapsed} navbar>
               <div
                 style={{
