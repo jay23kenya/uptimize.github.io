@@ -9,6 +9,7 @@ import Footer from "../../components/Footer/Footer";
 import Teams from "../../components/Teams/Teams";
 import CallToAction from "../../components/CallToAction/CallToAction";
 import "./style.css";
+import Services from "../../components/Services/Services";
 
 const mainStyle = {
   primaryColor: {
@@ -72,30 +73,29 @@ export class LandingPage extends Component {
         <div style={{ height: "100vh", maxWidth: "100%", zIndex: -9 }} />
         <div style={{ zIndex: 10 }}>
           <Nav mainStyle={mainStyle} />
-          <div style={{ position: "relative", backgroundColor: "white"  }}>
-              <Problem mainStyle={mainStyle} />
-              <CallToAction mainStyle={mainStyle} />
-              {/* Services */}
-             
-                <div id="wavyDiv">
-                  <FewWords mainStyle={mainStyle} />
-                  <Packages mainStyle={mainStyle} />
-                </div>
-       
-              <Teams mainStyle={mainStyle} />
-              {/* Download */}
-              {/* Other views */}
-              {/* <FAQ mainStyle={mainStyle} />
+          <div style={{ position: "relative", backgroundColor: "white" }}>
+            <Problem mainStyle={mainStyle} />
+            <CallToAction mainStyle={mainStyle} />
+            <Services mainStyle={mainStyle} />
+
+            <div id="wavyDiv">
+              <FewWords mainStyle={mainStyle} />
+              <Packages mainStyle={mainStyle} />
+            </div>
+
+            <Teams mainStyle={mainStyle} />
+            {/* Download */}
+            {/* Other views */}
+            {/* <FAQ mainStyle={mainStyle} />
             <Contact mainStyle={mainStyle} /> */}
-              {/* <div
+            {/* <div
             style={{
               height: "1000px",
               width: "100%",
               backgroundColor: "white"
             }}
           /> */}
-      
-          </div> 
+          </div>
           <Footer mainStyle={mainStyle} />
           {/* <PostFooter mainStyle={mainStyle} /> */}
         </div>

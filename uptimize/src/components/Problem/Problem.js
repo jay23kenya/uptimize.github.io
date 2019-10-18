@@ -14,14 +14,14 @@ import ColorButton from "../../misc/ColorButton";
 
 
 const problems1 = [
-  "Is explaining what you do complicated?",
+  "Do you lack the time to market your services?",
   "Did your last marketing effort flop?",
   "Is it time to revamp your website?"
 ];
 
 const problems2 = [
   "Are you struggling to get new leads?",
-  "Do you need a common story to unite your staff?",
+  "Are you up-to-date with the newest trends?",
   "Does marketing make your brain hurt?"
 ];
 
