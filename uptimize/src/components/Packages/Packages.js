@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Grid, Container } from "@material-ui/core";
 import Package from "./Package";
+import Investment from "./Investment";
 
 const package1 = {
   title: "Setup",
@@ -43,36 +44,44 @@ const package3 = {
 
 const Packages = props => {
   return (
-    <div style={{...props.mainStyle.section}}>
+    <div id='pricing' style={{ ...props.mainStyle.section }}>
       <Container fixed>
+        <div className="pb-5 mt-5" style={{ marginBottom: "" }}>
+          <Investment mainStyle={props.mainStyle} />
+        </div>
+
+        <div className="mb-5">
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="flex-end"
+            spacing={2}
+          >
+            <Grid item xs={12} md={4}>
+              <Package
+                mainStyle={props.mainStyle}
+                package={package1}
+                flatRate
+              />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Package
+                recommended
+                mainStyle={props.mainStyle}
+                package={package2}
+              />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Package mainStyle={props.mainStyle} package={package3} />
+            </Grid>
+          </Grid>
+        </div>
         <div className="text-center mb-5">
-          <h2 style={{ ...props.mainStyle.subHeader }}>Our Pricing</h2>
           <p style={{ ...props.mainStyle.text }}>
             <i>Risk free 30-day money back guarantee</i>
           </p>
         </div>
-
-        <Grid
-          container
-          direction="row"
-          justify="center"
-          alignItems="flex-end"
-          spacing={2}
-        >
-          <Grid item xs={12} md={4}>
-            <Package mainStyle={props.mainStyle} package={package1} flatRate />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Package
-              recommended
-              mainStyle={props.mainStyle}
-              package={package2}
-            />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Package mainStyle={props.mainStyle} package={package3} />
-          </Grid>
-        </Grid>
       </Container>
     </div>
   );
@@ -83,3 +92,10 @@ Packages.propTypes = {
 };
 
 export default Packages;
+
+/* <div className="text-center mb-5">
+          <h2 style={{ ...props.mainStyle.subHeader }}>Our Pricing</h2>
+          <p style={{ ...props.mainStyle.text }}>
+            <i>Risk free 30-day money back guarantee</i>
+          </p>
+        </div> */

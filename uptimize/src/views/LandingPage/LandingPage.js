@@ -5,7 +5,7 @@ import Nav from "../../components/Nav/Nav";
 import wavyBackground from "../../images/wavy-bg.svg";
 import FewWords from "../../components/FewWords/FewWords";
 import Packages from "../../components/Packages/Packages";
-import Footer from "../../components/Footer/Footer";
+import CallToActionFooter from "../../components/Footer/CallToActionFooter";
 import Teams from "../../components/Teams/Teams";
 import CallToAction from "../../components/CallToAction/CallToAction";
 import "./style.css";
@@ -96,7 +96,7 @@ export class LandingPage extends Component {
             }}
           /> */}
           </div>
-          <Footer mainStyle={mainStyle} />
+          <CallToActionFooter mainStyle={mainStyle} />
           {/* <PostFooter mainStyle={mainStyle} /> */}
         </div>
       </div>

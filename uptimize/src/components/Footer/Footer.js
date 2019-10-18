@@ -12,8 +12,6 @@ const styles = {
     height: "350px",
     width: "100%",
     zIndex: 10000,
-    position: "-webkit-sticky",
-    position: "sticky",
   },
   postFooter: {
     position: "-webkit-sticky",
@@ -39,8 +37,7 @@ const links = [
 
 const Footer = props => {
   return (
-    <div style={{position: 'relative', backgroundColor: 'white'}}>
-      <div className="bg-dark" id='footer'>
+      <div className="bg-dark" style={styles.footer}>
         <Container fixed>
           <footer>
             <div class="mui-container mui--text-center">
@@ -52,10 +49,6 @@ const Footer = props => {
           </footer>
         </Container>
       </div>
-      <div id='postFooter' >
-        <PostFooter mainStyle={props.mainStyle} />
-      </div>
-    </div>
   );
 };
 

@@ -10,9 +10,10 @@ import {
   NavLink
 } from "reactstrap";
 import { ReactComponent as Logo } from "../../images/logo.svg";
-import { Container } from "@material-ui/core";
+import { Container, Hidden } from "@material-ui/core";
+import ColorButton from "../../misc/ColorButton";
 
-const backgroundColor = "grey";
+const backgroundColor = "white";
 const styles = {
   logo: {
     height: "45%",
@@ -40,13 +41,39 @@ const styles = {
   }
 };
 
+const navLinks = [
+  {
+    title: "Services",
+    href: "/#services"
+  },
+  {
+    title: "About Us",
+    href: "/#about-us"
+  },
+  {
+    title: "Pricing",
+    href: "/#pricing"
+  },
+  {
+    title: "FAQ",
+    href: ""
+  },
+  {
+    title: "Contact",
+    href: ""
+  }
+];
+
 const NavContent = props => {
   return (
     <Navbar light className="h-100" sticky="top" expand="md">
       <Container fixed>
         <div className="d-flex">
           <div>
-            <NavbarBrand href="/" title='The best marketing team in Tampa, Florida. Uptimize Digital Marketing.'>
+            <NavbarBrand
+              href="/"
+              title="The best marketing team in Tampa, Florida. Uptimize Digital Marketing."
+            >
               <div style={styles.logo.position}>
                 <Logo height={styles.logo.height} width={styles.logo.width} />
               </div>
@@ -59,24 +86,42 @@ const NavContent = props => {
             </div>
             <Collapse isOpen={!props.collapsed} navbar>
               <div
-                style={
-                  props.collapsed
-                    ? { backgroundColor: 'inherit' }
-                    : { backgroundColor: styles.backgroundColor, padding: '5px'}
-                }
+                style={{
+                  backgroundColor: styles.backgroundColor,
+                  padding: "5px"
+                }}
               >
-                {/* //props.transparentBackground}}> */}
-                <Navigation className="ml-auto" navbar>
-                  <NavItem>
-                    <NavLink href="#problem" title='Problem'>
-                      <div style={{ ...props.mainStyle.text, fontSize: '14px' }}>Problem</div>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="#solution" title='Solution'>
-                      <div style={{ ...props.mainStyle.text, fontSize: '14px'  }}>Solution</div>
-                    </NavLink>
-                  </NavItem>
+                <Navigation className="ml-auto mt-auto mb-auto h-100" navbar>
+                  {navLinks.map((link, idx) => (
+                    <NavItem key={idx} className="mt-auto mb-auto">
+                      <NavLink href={link.href} title={link.title}>
+                        <div
+                          style={{ ...props.mainStyle.text, fontSize: "14px" }}
+                        >
+                          {link.title}
+                        </div>
+                      </NavLink>
+                    </NavItem>
+                  ))}
+
+                  <Hidden mdDown>
+                    <NavItem>
+                      <NavLink title="Get Started">
+                        <ColorButton
+                          contained
+                          noRadius
+                          color={props.mainStyle.buttonColor.color}
+                          hoverColor={props.mainStyle.buttonColor.hoverColor}
+                          style={{
+                            ...props.mainStyle.button,
+                            padding: "10px 14px"
+                          }}
+                        >
+                          Get Started
+                        </ColorButton>
+                      </NavLink>
+                    </NavItem>
+                  </Hidden>
                 </Navigation>
               </div>
             </Collapse>

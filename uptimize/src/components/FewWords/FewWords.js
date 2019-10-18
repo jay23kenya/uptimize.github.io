@@ -16,7 +16,7 @@ const styles = {
   
 const FewWords = props => {
   return (
-    <div style={{
+    <div id='about-us' style={{
         ...props.mainStyle.section
       }}>
       <Container fixed>
@@ -40,7 +40,7 @@ const FewWords = props => {
               <div className="m-3" style={{ maxWidth: "500px" }}>
                 <p style={{...props.mainStyle.text, fontSize: '18px'}}>
                   We are a Digital Marketing Company with a primary focus on
-                  Dentists. What separates us from our competition is that we
+                  <b> Dentists</b>. What separates us from our competition is that we
                   have a strategic system in place which allows us to <b>get high
                   quality leads to convert</b>. We're comprised of Computer
                   Engineers and Computer Scientists with extensive marketing
