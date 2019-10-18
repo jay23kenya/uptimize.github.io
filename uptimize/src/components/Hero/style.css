@@ -5,3 +5,21 @@
     top: 0;
     z-index: 0;
 }
+
+#bounce {
+    animation: bounce 2s infinite linear;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+    }
+}

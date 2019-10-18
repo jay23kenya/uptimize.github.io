@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container } from "@material-ui/core";
+import { Container, IconButton, Icon } from "@material-ui/core";
 import backgroundImage from "../../images/HeroImage.jpg";
 import lazyBackgroundImage from "../../images/HeroImage-min.jpg";
 import LazyLoad from "react-lazyload";
 import FadeInText from "./FadeInText";
-import './style.css'
+import "./style.css";
 
 const styles = {
   hero: {
@@ -41,7 +41,12 @@ const styles = {
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent"
   },
-
+  down: {
+    position: "absolute",
+    bottom: "10px",
+    left: '50%',
+    marginLeft: '-25px'
+  }
 };
 
 const fadeInText = [
@@ -68,6 +73,11 @@ const HeroContent = props => {
               </h1>
               <FadeInText fadeInText={fadeInText} mainStyle={props.mainStyle} />
             </div>
+            <div id='bounce' style={styles.down}>
+              <a href="/#your-message">
+                <Icon style={{color: 'white', fontSize: '50px'}}>arrow_downward</Icon>
+              </a>
+            </div>
           </Container>
         </div>
       </div>
@@ -84,7 +94,7 @@ HeroContent.propTypes = {
 
 const Hero = props => {
   return (
-    <div id='stick'>
+    <div id="stick">
       <div>
         <LazyLoad
           once
