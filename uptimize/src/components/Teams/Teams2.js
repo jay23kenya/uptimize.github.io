@@ -19,7 +19,7 @@ import CodeIcon from "@material-ui/icons/Code";
 import LazyLoad from "react-lazyload";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import "./style.css";
+import { width } from "@material-ui/system";
 
 const teamMembers = [
     {
@@ -53,56 +53,71 @@ const teamMembers = [
     },
 ]
 
-const Teams2 = () => {
-  let j = 0;
-  let arr = [];
-  while (j < 4) {
-    arr[j] = (
-      <Grid item xs={3}>
+const Teams2 = (props) => {
+  return(
+    <div>
+    <Container fixed>
+  {  teamMembers.map((member) => (    
+    <div style={{"width": "100%", "display": "inline-block"}}>
+      <Grid container spacing={4}>
+        <Grid item xs={3}>
         <Paper>
           <Card>
-            <CardActionArea>
-              <div class="team-member">
-                <div class="team-img">
-                  <CardMedia
-                    //className="img-responsive"
+         <CardMedia
                     component="img"
-                    alt={names[j]}
-                    image={images[j]}
-                    title={names[j]}
-                  />
-                </div>
-                <div class="team-hover">
-                  <div class="desk">
-                    <h4>{fullNames[j]}</h4>
-                    <p>{titles[j]}</p>
-                  </div>
-                  <div class="s-link">
-                                        <a href="#"><i class="fa fa-facebook"><FacebookIcon /></i></a>
-                                        <a href="#"><i class="fa fa-twitter"><InstagramIcon/></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"><CodeIcon/></i></a>
-                                    </div>
-                </div>
-                <div class="team-title">
-                  <h5>{fullNames[j]}</h5>
-                  <span>{titles[j]}</span>
+                    alt="Amer"
+                    height="250"
+                    image={member.image} 
+                    title="Amer"
+                    style={{"display" : "inline-block"}}                 
+                  />    </Card>  </Paper>        
+        </Grid>    
+        </Grid>     
+        </div>           
+    ))}
+   </Container>
+</div>
+  )
+  // while (j < 4) {
+  //   arr[j] = (
+  //     <Grid item xs={3}>
+  //       <Paper>
+  //         <Card>
+  //           <CardActionArea>
+  //             <div class="team-member">
+  //               <div class="team-img">
+  //                 <CardMedia
+  //                   //className="img-responsive"
+  //                   component="img"
+  //                   alt={names[j]}
+  //                   image={images[j]}
+  //                   title={names[j]}
+  //                 />
+  //               </div>
+  //               <div class="team-hover">
+  //                 <div class="desk">
+  //                   <h4>{fullNames[j]}</h4>
+  //                   <p>{titles[j]}</p>
+  //                 </div>
+  //                 <div class="s-link">
+  //                                       <a href="#"><i class="fa fa-facebook"><FacebookIcon /></i></a>
+  //                                       <a href="#"><i class="fa fa-twitter"><InstagramIcon/></i></a>
+  //                                       <a href="#"><i class="fa fa-google-plus"><CodeIcon/></i></a>
+  //                                   </div>
+  //               </div>
+  //               <div class="team-title">
+  //                 <h5>{fullNames[j]}</h5>
+  //                 <span>{titles[j]}</span>
                   
-                </div>
-              </div>
-            </CardActionArea>
-          </Card>
-        </Paper>
-      </Grid>
-    );
-    j++;
-  }
-  return (
-    <Container fixed>
-      <Grid container spacing={4}>
-        {arr}
-      </Grid>
-    </Container>
-  );
+  //               </div>
+  //             </div>
+  //           </CardActionArea>
+  //         </Card>
+  //       </Paper>
+  //     </Grid>
+  //   );
+  //   j++;
+  // }
 };
 
 export default Teams2;

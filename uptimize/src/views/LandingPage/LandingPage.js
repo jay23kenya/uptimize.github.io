@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-//import Teams2 from '../../components/Teams/Teams2'
+import Teams2 from '../../components/Teams/Teams2'
+import Teams from '../../components/Teams/Teams'
 import FAQ from '../../components/FAQ/FAQ'
 import Footer from '../../components/Footer/Footer'
 import Contact from '../../components/Contact/Contact'
@@ -18,6 +19,10 @@ const mainStyle = {
       fontSize: "46px",
       fontWeight: "700"
     },
+    teamCard: {
+      width: "25%",
+      display: "inline-block",      
+    },
     subHeader: {
       fontFamily: "Montserrat, 'Proza Libre', sans-serif",
       fontSize: "28px",
@@ -33,6 +38,20 @@ const mainStyle = {
     button: {
       fontFamily: "Montserrat, 'Proza Libre', sans-serif",
       fontWeight: 700
+    },
+    overlay: {
+      top: "0",
+      bottom: "0",
+      left: "0",
+      right: "0",
+      height: "100%",
+      width: "100%",
+      opacity: "1",
+      transition: ".5s ease",
+      backgroundColor: "#008CBA",
+      '&:hover': {
+        background: "black",
+     },
     },
     buttonColor: {
       color: "#03fc7f",
@@ -65,7 +84,7 @@ export class LandingPage extends Component {
     render() {
         return (
             <div>
-                {/* <Teams2/> */}                
+              <Teams mainStyle={mainStyle}/>                           
                 <SimpleExpansionPanel />
                 <Contact mainStyle={mainStyle}  />
                 {/* <Stats/> */}

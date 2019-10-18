@@ -134,12 +134,7 @@ export default function Contact(props) {
           <LazyLoad once height={200} offset={[0, 200]}>
            
             <div style={classes.container}>
-              <Amer
-                style={classes.img2}
-
-                //   height={"100%"}
-                //  width={"50%"}
-              />
+             
               </div>
        
           </LazyLoad>
