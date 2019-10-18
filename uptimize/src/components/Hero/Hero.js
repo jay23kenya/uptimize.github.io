@@ -6,7 +6,7 @@ const Hero = props => {
     return (
     <div>
         <Container fixed>
-        <h1>works</h1>
+        <h1>YEYYEE</h1>
         </Container>
     </div>
     )
