@@ -1,21 +1,26 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
 import { ReactComponent as Logo } from "../../images/shortLogo.svg";
+import  bg  from "../../images/stars.svg";
+import './style.css'
 
 const styles = {
   root: {
-    backgroundImage:
-      "linear-gradient( 136deg, rgb(14, 40, 67) 0%, rgb(14, 123, 200) 50%, rgb(14, 40, 67) 100%)",
-    display: "flex",
+     backgroundColor: 'black',//"#02bd5f",
+    backgroundImage: `url(${bg})`,
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center',
+    // display: "flex",
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    width: "100vw"
+    width: "100vw",
+    position: 'sticky',
   },
 
   logo: {
-    height: "150px",
-    paddingLeft: "100px"
+    // height: "150px",
+    // paddingLeft: "100px"
   },
   shadow: {
     boxShadow:
@@ -29,7 +34,7 @@ const Screen = () => {
     <div className="text-center"style={styles.root}>
         <div style={styles.logo}>
           <LazyLoad once height={100}>
-            <Logo />
+            <Logo id='loading' height={200} width={200} />
           </LazyLoad>
         </div>
     </div>

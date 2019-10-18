@@ -48,6 +48,7 @@ export default function ColorButton(props) {
             variant="contained"
             color="primary"
             style={props.style}
+            onClick={props.onClick}
           >
             {props.children}
           </ContainedButton>
@@ -59,6 +60,7 @@ export default function ColorButton(props) {
             variant="outlined"
             color="primary"
             style={props.style}
+            onClick={props.onClick}
           >
             {props.children}
           </OutlinedButton>
@@ -75,5 +77,6 @@ ColorButton.propTypes = {
   hoverColor: PropTypes.string.isRequired,
   contained: PropTypes.bool,
   noRadius: PropTypes.bool,
-  style: PropTypes.object
+  style: PropTypes.object,
+  onClick: PropTypes.func.isRequired
 };

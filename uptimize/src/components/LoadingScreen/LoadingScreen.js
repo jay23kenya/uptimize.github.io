@@ -45,19 +45,34 @@ const styles = {
   root: {
     height: "100vh",
     zIndex: 10000000,
-    position: "absolute",
+    position: "fixed",
     width: "100vw"
   },
 
   child: {
-    position: "relative",
-    zIndex: 0,
-    
-  },
-  gone: {
+
     overflow: "hidden",
-    display: 'none'
-    // height: "100vh"
+    height: "100%",
+    "::-webkit-scrollbar": {
+      display: 'none'
+    },
+    "-webkit-scrollbar": {
+      display: 'none'
+
+    }
+  },
+  noScroll: {
+    overflow: "hidden",
+    height: "100%",
+    "::-webkit-scrollbar": {
+      display: 'none'
+
+    },
+    test: {
+    
+      overflow: "scroll",
+    }
+
   }
 };
 
@@ -70,6 +85,7 @@ export class LoadingScreen extends Component {
       loaded: false
     };
   }
+
   componentWillMount() {
     const { variation, animationDuration, timeout } = this.props;
     HomePageElm = getAnimation(variation, animationDuration, timeout);
@@ -86,7 +102,9 @@ export class LoadingScreen extends Component {
     return (
       <div style={this.state.loaded ? {} : styles.noScroll}>
         <HomePageElm style={styles.root}>{loadingScreen}</HomePageElm>
-        <div style={this.state.loaded ? styles.child : styles.gone}>{children}</div>
+        <div style={styles.test}>
+        <div style={styles.child}>{children}</div>
+        </div>
       </div>
     );
   }
