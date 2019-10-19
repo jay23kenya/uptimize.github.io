@@ -8,9 +8,9 @@
       "start": "node server.js",
       "server": "nodemon server.js",
       "front-end": "npm run start --prefix client",
-      "dev": "concurrently \"npm run server\" \"npm run front-end\""
+      "dev": "concurrently \"yarn server\" \"yarn front-end\""
   },
-  "author": "Wade Smith",
+  "author": "Wade Smith - Dux",
   "license": "MIT",
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
