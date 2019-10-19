@@ -56,8 +56,8 @@ const styles = {
     WebkitTextFillColor: "transparent"
   },
   gold: {
-    color: "#ffd700",
-    hoverColor: "#D4AF37"
+    color: '#faaa1e',//"#ffd700",
+    hoverColor: "#ffd700"//"#D4AF37"
   }
 };
 

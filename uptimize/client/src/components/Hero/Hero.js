@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, IconButton, Icon } from "@material-ui/core";
+import { Container, Icon } from "@material-ui/core";
 import backgroundImage from "../../images/HeroImage.jpg";
 import lazyBackgroundImage from "../../images/HeroImage-min.jpg";
 import LazyLoad from "react-lazyload";
