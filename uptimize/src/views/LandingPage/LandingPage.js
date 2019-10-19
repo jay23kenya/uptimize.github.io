@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import Teams2 from '../../components/Teams/Teams2'
 import Teams from '../../components/Teams/Teams'
-import FAQ from '../../components/FAQ/FAQ'
 import Footer from '../../components/Footer/Footer'
 import Contact from '../../components/Contact/Contact'
 import SimpleExpansionPanel from '../../components/FAQ/FAQ3'
 import Stats  from '../../components/Stats/Stats'
+import FAQ from '../FAQ/FAQ'
 //import Faq from '../../components/FAQ/FAQ2'
 const mainStyle = {
     primaryColor: {
@@ -29,6 +28,13 @@ const mainStyle = {
       fontWeight: "700",
       letterSpacing: "0px"
     },
+    membertext: {
+      color: "black",
+      fontFamily: "Montserrat, 'Proza Libre', sans-serif",
+      fontSize: "14px",
+      fontWeight: 400,
+      textAlign: "center"
+    },
     text: {
       color: "black",
       fontFamily: "Montserrat, 'Proza Libre', sans-serif",
@@ -38,7 +44,7 @@ const mainStyle = {
     button: {
       fontFamily: "Montserrat, 'Proza Libre', sans-serif",
       fontWeight: 700
-    },
+    },    
     overlay: {
       top: "0",
       bottom: "0",
@@ -50,7 +56,7 @@ const mainStyle = {
       transition: ".5s ease",
       backgroundColor: "#008CBA",
       '&:hover': {
-        background: "black",
+        background: "blue",
      },
     },
     buttonColor: {
@@ -83,9 +89,10 @@ const mainStyle = {
 export class LandingPage extends Component {
     render() {
         return (
+          
             <div>
               <Teams mainStyle={mainStyle}/>                           
-                <SimpleExpansionPanel />
+                  <FAQ />
                 <Contact mainStyle={mainStyle}  />
                 {/* <Stats/> */}
                 <Footer />

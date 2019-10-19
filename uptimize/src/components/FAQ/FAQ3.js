@@ -33,7 +33,7 @@ const qanda = [
         answer: "Yes, we charge a certain fee for just photography sessions. Contact us to get your quote!"
     },
 ]
-export default function SimpleExpansionPanel() {
+const SimpleExpansionPanel = (props) => {
   return (
     <div>
         <Container fixed >
@@ -61,3 +61,5 @@ export default function SimpleExpansionPanel() {
     </div>
   );
 }
+
+export default SimpleExpansionPanel
