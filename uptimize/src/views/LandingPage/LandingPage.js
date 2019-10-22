@@ -11,7 +11,7 @@ import CallToAction from "../../components/CallToAction/CallToAction";
 import "./style.css";
 import Services from "../../components/Services/Services";
 
-const mainStyle = {
+export const mainStyle = {
   primaryColor: {
     color: "#03fc7f"
   },
