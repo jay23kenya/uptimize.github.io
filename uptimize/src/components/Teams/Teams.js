@@ -12,8 +12,8 @@ import droLazy from "../../images/alejandro-min.jpg";
 import jayLazy from "../../images/jay-min.jpg";
 import "./style.css";
 import { styles } from "ansi-colors";
-import { mdiLinkedinBox } from '@mdi/js';
-import LinkedIn from "../../images/linkedin-box (2).png"
+import { mdiLinkedinBox } from "@mdi/js";
+import LinkedIn from "../../images/linkedin-box (2).png";
 const teamMembers = [
   {
     name: "Amer",
@@ -61,8 +61,7 @@ const style = {
   text: {
     fontSize: "12px",
     fontWeight: "600",
-    color: "white",
-        
+    color: "white"
   },
   rel: {},
   team: {
@@ -72,11 +71,12 @@ const style = {
     marginTop: "5rem"
   },
   titletext: {
-    fontSize:" 0.75rem",
-    textTransform:" uppercase",
+    fontSize: "0.75rem",
+    textTransform: " uppercase",
     fontWeight: "500",
     letterSpacing: "2px",
-    overflowWrap: "break-word"
+    whiteSpace: "pre",
+    overflowWrap : "breakword"
   }
 };
 
@@ -97,20 +97,21 @@ const Teams = props => {
                   }}
                 >
                   <div id="overlay">
-                  <div style={{...style.team}}>
-                    <div style={{ color: "white", ...style.text }}>
-                      {member.fullName}
+                    <div style={{ ...style.team }}>
+                      <div style={{ color: "white", ...style.text }}>
+                        {member.fullName}
+                      </div>
+                      <div id="titletext">
+                        {member.title}
+                      </div>
+                      <div>
+                        <a href="www.google.com">
+                          <img src={LinkedIn} />
+                        </a>
+                      </div>
+
+                      <div></div>
                     </div>
-                    <div style={{ color: "white", ...style.titletext }}>
-                      {member.title}
-                    </div> 
-                    <div style={{ color: "white", ...style.titletext }}><a href="www.google.com">Click me</a>
-                          </div>
-                       
-                      
-                    <div>
-                    </div>
-                  </div>
                   </div>
                 </div>
               }
@@ -123,17 +124,20 @@ const Teams = props => {
                 id="member"
               >
                 <div id="overlay">
-                  <div style={{...style.team}}>
+                  <div style={{ ...style.team }}>
                     <div style={{ color: "white", ...style.text }}>
                       {member.fullName}
                     </div>
-                    <div style={{ color: "white", ...style.titletext }}>
+                    <div id="titletext">
                       {member.title}
                     </div>
-                    <div style={{ color: "white", ...style.titletext }}><a href="www.google.com"><img src={LinkedIn}/></a>
-                          </div>
+                    <div style={{ color: "white", ...style.titletext }}>
+                      <a href="www.google.com">
+                        <img src={LinkedIn} />
+                      </a>
+                    </div>
                   </div>
-                  </div>
+                </div>
               </div>
             </LazyLoad>
           </Grid>
