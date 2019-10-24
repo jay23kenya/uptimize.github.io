@@ -53,7 +53,7 @@ const style = {
     // ticky ==> navbar is sticky once u scroll right past it
     // flex ==> things right next to each other
     // inline ==> one per line
-    height: "250px",
+    height: "350px",
     width: "100%",
     backgroundSize: "cover",
     backgroundPosition: "center"

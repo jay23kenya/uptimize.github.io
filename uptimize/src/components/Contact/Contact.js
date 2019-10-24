@@ -14,7 +14,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { black } from 'ansi-colors';
 import ColorButton from "../../misc/ColorButton";
-import { ReactComponent as Amer } from "../../images/amer.svg";
 import LazyLoad from "react-lazyload";
 import ScrollAnimation from "react-animate-on-scroll";
 const footerHeight = 300;

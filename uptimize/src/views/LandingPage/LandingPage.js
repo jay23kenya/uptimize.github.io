@@ -26,7 +26,8 @@ const mainStyle = {
       fontFamily: "Montserrat, 'Proza Libre', sans-serif",
       fontSize: "28px",
       fontWeight: "700",
-      letterSpacing: "0px"
+      letterSpacing: "0px",
+      textAlign: "center"
     },
     membertext: {
       color: "black",
