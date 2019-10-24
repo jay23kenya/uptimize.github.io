@@ -10,7 +10,7 @@ const styles = {
     backgroundImage: `url(${bg})`,
     backgroundSize: 'cover', 
     backgroundPosition: 'center',
-    // display: "flex",
+   display: "flex",
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
