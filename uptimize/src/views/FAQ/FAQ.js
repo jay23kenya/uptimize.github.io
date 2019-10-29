@@ -1,8 +1,8 @@
 import React from 'react';
 import SimpleExpansionPanel from '../../components/FAQ/FAQ'
-import Nav from "../../components/Nav/Nav";
-import wavyBackground from "../../images/wavy-bg.svg";
-import CallToActionFooter from "../../components/Footer/CallToActionFooter";
+//import Nav from "../../components/Nav/Nav";
+//import wavyBackground from "../../images/wavy-bg.svg";
+// import CallToActionFooter from "../../components/Footer/CallToActionFooter";
 const mainStyle = {
     primaryColor: {
       color: "#03fc7f"
@@ -60,9 +60,9 @@ const mainStyle = {
 const FAQ = props => {
     return (
         <div>
-        <Nav mainStyle={mainStyle} />
+        {/* <Nav mainStyle={mainStyle} /> */}
         <SimpleExpansionPanel mainStyle={mainStyle} />
-        <CallToActionFooter mainStyle={mainStyle} />
+        {/* <CallToActionFooter mainStyle={mainStyle} /> */}
         </div>
     )
 }

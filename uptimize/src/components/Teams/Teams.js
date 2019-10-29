@@ -20,21 +20,24 @@ const teamMembers = [
     fullName: "Amer Abdelaziz",
     title: "CEO / Founder",
     image: Amer,
-    lazyImage: amerLazy
+    lazyImage: amerLazy,
+    url : "https://www.linkedin.com/in/amer-farha-kahla-a44a77139/"
   },
   {
     name: "Wade",
     fullName: "Wade Smith",
     title: "Co-Founder / President",
     image: Wade,
-    lazyImage: wadeLazy
+    lazyImage: wadeLazy,
+    url: "https://www.linkedin.com/in/theengineerwadejr/"
   },
   {
     name: "Jay",
     fullName: "Jay Patel",
     title: "Web Development Manager",
     image: Jay,
-    lazyImage: jayLazy
+    lazyImage: jayLazy,
+    url: "https://www.linkedin.com/in/jppatel23/"
   },
   {
     name: "Alejandro",
@@ -59,24 +62,27 @@ const style = {
     backgroundPosition: "center"
   },
   text: {
-    fontSize: "12px",
+    fontFamily: "Montserrat, sans-serif",
+    fontSize: "24px",
     fontWeight: "600",
-    color: "white"
+    color: "white",    
   },
   rel: {},
   team: {
     position: "absolute",
     color: "white",
-    padding: "3rem",
-    marginTop: "5rem"
+    fontFamily: "Montserrat, sans-serif",
+    marginTop: "220px",
+    marginLeft: "30px",
+    textSize: "30px"
   },
   titletext: {
-    fontSize: "0.75rem",
+    fontFamily: "Montserrat, sans-serif",
+    fontSize: "10px",
     textTransform: " uppercase",
-    fontWeight: "500",
-    letterSpacing: "2px",
-    whiteSpace: "pre",
-    overflowWrap : "breakword"
+    fontWeight: "500px",
+    letterSpacing: "2px",    
+    
   }
 };
 
@@ -101,11 +107,11 @@ const Teams = props => {
                       <div style={{ color: "white", ...style.text }}>
                         {member.fullName}
                       </div>
-                      <div id="titletext">
+                      <div style={{ ...style.titletext, marginBottom: "20px" }} >
                         {member.title}
                       </div>
                       <div>
-                        <a href="www.google.com">
+                        <a href={member.url}>
                           <img src={LinkedIn} />
                         </a>
                       </div>
@@ -128,11 +134,11 @@ const Teams = props => {
                     <div style={{ color: "white", ...style.text }}>
                       {member.fullName}
                     </div>
-                    <div id="titletext">
+                    <div style={{ color: "white", ...style.titletext}}>
                       {member.title}
                     </div>
-                    <div style={{ color: "white", ...style.titletext }}>
-                      <a href="www.google.com">
+                    <div style={{ color: "white", "marginTop": "10px" }}>
+                      <a href={member.url}>
                         <img src={LinkedIn} />
                       </a>
                     </div>

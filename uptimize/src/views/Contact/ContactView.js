@@ -1,8 +1,8 @@
 import React from 'react';
 import Contact from '../../components/Contact/Contact'
-import Nav from "../../components/Nav/Nav";
-import wavyBackground from "../../images/wavy-bg.svg";
-import CallToActionFooter from "../../components/Footer/CallToActionFooter";
+//import Nav from "../../components/Nav/Nav";
+//import wavyBackground from "../../images/wavy-bg.svg";
+// import CallToActionFooter from "../../components/Footer/CallToActionFooter";
 const mainStyle = {
     primaryColor: {
       color: "#03fc7f"
@@ -48,7 +48,7 @@ const mainStyle = {
     },
     wavyDiv: {
       backgroundColor: "white",
-      backgroundImage: `url(${wavyBackground})`,
+      // backgroundImage: `url(${wavyBackground})`,
       height: "100%",
       width: "100%",
       backgroundSize: "cover",
@@ -59,9 +59,9 @@ const mainStyle = {
 const ContactView = props => {
     return (
         <div>
-            <Nav mainStyle={mainStyle} />
+            {/* <Nav mainStyle={mainStyle} /> */}
         <Contact mainStyle={props.mainStyle}/>
-        <CallToActionFooter mainStyle={mainStyle} />
+        {/* <CallToActionFooter mainStyle={mainStyle} /> */}
         </div>
     )
 }
